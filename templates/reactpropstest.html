@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <!-- react -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+
+    <!-- react dom -->
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js"></script>
+  </head>
+  <style>
+      *{ background-color: #333333;}
+  </style>
+  <body>
+    <div id="root"></div>
+  </body>
+
+  <script type='text/babel'>
+    const { render } = ReactDOM;
+    const { Component } = React;
+
+    const { Route, HashRouter, Link } = ReactRouterDOM
+
+    const List = ({history, location, nums}) => {
+        console.log(history)
+        return (
+            <hr />
+        )
+    }
+
+    class App extends Component {
+      constructor() {
+        super();
+        this.state = {
+          nums: [1, 2, 3, 4, 5],
+          strings: ['a','b']
+        };
+      }
+
+      onUpdate() {}
+
+      componentDidMount() {}
+
+      render() {
+        const { nums, strings } = this.state;
+        return (
+            <HashRouter>
+                <Route path='/:whatever' render={(props)=> (<List {...props} nums={ nums} strings={strings} />)} />
+            </HashRouter>
+        )
+      }
+    }
+
+    const root = document.querySelector("#root");
+    render(<App />, root);
+  </script>
+</html>

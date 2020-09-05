@@ -1,0 +1,11 @@
+Electrical switches
+
+AND gate
+OR gate
+
+|                  Input A
+|                    | |
+|--------------------/ /----------------------|
+supply current      gate       drain/output current
+
+

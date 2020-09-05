@@ -1,0 +1,133 @@
+<html>
+  <head>
+<style>
+  body {
+    font-family: verdana;
+  }
+  main > *{
+    padding: 1rem;
+    margin: 1rem;
+    border: solid 1px black;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  nav a {
+    padding: 1rem;
+  }
+  nav a.selected {
+    font-weight: bold;
+    background-color: tomato;
+    color: white;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  button, input {
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+  form > * {
+    margin: 1rem;
+  }
+</style>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js'></script>
+    <script src=https://unpkg.com/babel-standalone@6/babel.min.js></script>
+    <script src=https://unpkg.com/react@16/umd/react.development.js crossorigin></script>
+    <script src=https://unpkg.com/react-dom@16/umd/react-dom.development.js crossorigin></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.0.0/react-router-dom.js'></script>
+  </head>
+  <body>
+    <div id='root'></div>
+    <script type='text/babel'>
+      const { HashRouter, Link, Route } = ReactRouterDOM;
+      const { Component } = React;
+      class Form extends Component{
+        constructor(){
+          super();
+          this.state = {
+            value: ''
+          };
+        }
+        render(){
+          const { value } = this.state;
+          const onSubmit = (ev)=> {
+            ev.preventDefault();
+            this.props.addNumber(value, this.props.history);
+          };
+          return (
+            <form onSubmit={ onSubmit }>
+              <input name='foo' value={ value } onChange={ (ev)=> this.setState({ value: ev.target.value})}/>
+              <button disabled={ value === ''}>Save</button>
+            </form>
+          );
+        }
+      }
+      const List = ({ numbers, match, addNumber, history })=> {
+        const filter = match.params.filter;
+        let filtered = numbers;
+        if(filter){
+          filtered = filtered.filter( number => {
+            if(filter === 'odd'){
+              return number % 2 === 1;
+            }
+            if(filter === 'even'){
+              return number % 2 === 0;
+            }
+          });
+        }
+        return (
+          <main>
+            <nav>
+              <Link to='/' className={ !filter ? 'selected': ''}>All</Link>
+              <Link to='/even' className= { filter === 'even' ? 'selected': ''}>Even</Link>
+              <Link to='/odd' className={ filter === 'odd' ? 'selected': ''}>Odd</Link>
+            </nav>
+            <Form addNumber={ addNumber } history={ history }/>
+            <ul>
+              {
+                filtered.map( (number, idx) => {
+                  return (
+                    <li key={ idx }>{ number }</li>
+                  );
+                })
+              }
+            </ul>
+          </main>
+        );
+      };
+      class App extends Component{
+        constructor(){
+          super();
+          this.state = {
+            numbers: [
+              1, 2, 3, 4, 5, 6
+            ]
+          };
+        }
+        render(){
+          const { numbers } = this.state;
+          const addNumber = (number, history)=> {
+            this.setState({ numbers: [...numbers, number]});
+            if(number % 2 === 1){
+              history.push('/odd');
+            }
+            else {
+              history.push('/even');
+            }
+            //TODO- odd or even
+          };
+          return (
+            <HashRouter>
+              <Route path='/:filter?' render={ (props)=> <List addNumber={ addNumber } match={ props.match}  history={props.history} numbers={ numbers }/>}/>
+            </HashRouter>
+          );
+        }
+      }
+      const root = document.querySelector('#root');
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+Data Structures
+
+Binary Serch trees
+Queues
+Stacks
+Singly Linked Lists
+Binary Heaps
+Directed Graphs
+and so on....
+
+collections of values, the relationships among them, and the functions or operations that can be applied to the data
+
+Heiristics - get you a close guess
+
+big of

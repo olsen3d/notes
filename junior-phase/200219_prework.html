@@ -1,0 +1,227 @@
+<html>
+
+<head>
+    <meta name='view' content='width=device-width, initial-scale=1.0' />
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js'></script>
+    <script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js'></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: black;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+        }
+
+        .selected {
+            background-color: tomato;
+            color: white;
+            padding: .25rem;
+            border-radius: .2rem;
+        }
+
+        #home {
+            padding: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #companiesPage {
+            display: flex;
+        }
+
+        ul {
+            list-style-type: none;
+            flex: 1
+        }
+
+        ul>li {
+            margin-bottom: 1rem;
+        }
+
+        #companiesPage>div {
+            flex: 1
+        }
+
+        .companyItem {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin: 0.5rem 0;
+            border-bottom: solid 1px black;
+            padding: 0.5rem 0;
+        }
+
+        .year {
+            background-color: tomato;
+            color: white;
+            padding: 0.5rem;
+            border-radius: .2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='root'></div>
+    <script type='text/babel'>
+        const { Component } = React;
+    const { render } = ReactDOM;
+    const { Switch, Link, Route, HashRouter, Redirect } = ReactRouterDOM;
+
+    const Nav = ({ companies, path })=> {
+        const grouped = companies.reduce((acc, company) => {
+        const letter = company.name.slice(0,1) 
+        if (!acc[letter]) {
+            acc[letter] = []
+        }
+        acc[letter].push(company)
+        return acc
+      }, {})
+    
+          const maxLetter = () => {
+              let max = ''
+              let count = 0
+              for (let key in grouped) {
+                  if (grouped[key].length > count) {
+                      count = grouped[key].length
+                      max = key
+                  }
+              }
+              return max
+          }
+          console.log(maxLetter())
+      let letter = ''
+      if (Object.keys(grouped).length > 0) {
+          letter = Object.keys(grouped).sort()[0]
+      }
+      const links = [
+        { to: '/', text: 'Acme Company Profits with React Router', selected: path === '/' },
+        { to: `/companies/${letter}`, text: `Companies (${ companies.length })`, selected: path.startsWith('/companies')},
+      ];
+      return (
+        <nav>
+          {
+            links.map( (link, idx) => <Link key={ idx } to={ link.to } className={ link.selected ? 'selected': ''}>{ link.text }</Link>)
+          }
+        </nav>
+      );
+    };
+
+    const Companies = (props)=> {
+      const { companies, location, match } = props;
+      const letter = match.params.letter
+      const grouped = companies.reduce((acc, company) => {
+        const letter = company.name.slice(0,1) 
+        if (!acc[letter]) {
+            acc[letter] = []
+        }
+        acc[letter].push(company)
+        return acc
+      }, {})
+      return (
+        <div>
+            <nav>
+                {
+                Object.keys(grouped).sort().map( key => <Link className={ letter === key ? 'selected' : ''} to={`/companies/${key}`} key={key}> {key}</Link>)
+                }
+            </nav>
+            {
+                letter && grouped[letter] && (
+                    <ul>
+                        {
+                        grouped[letter].map( company => <li 
+                            key={ company.id }>
+                            <Link to={`/companies/${letter}/${ company.id }`} className={ location.pathname === `/companies/${letter}/${company.id}` ? 'selected' : ''}>
+                            { company.name }
+                            </Link>
+                        </li>)
+                        }
+                    </ul>
+                )
+            }
+                <Route path='/companies/:letter/:id' component={ Company } />
+        </div>
+      )
+    };
+
+    class Company extends Component{
+      constructor(){
+        super();
+        this.state = {
+          companyProfits: [] 
+        };
+      }
+      async componentDidMount(){
+        const id = this.props.match.params.id;
+        const response = await axios.get(`https://acme-users-api-rev.herokuapp.com/api/companies/${id}/companyProfits`)
+        this.setState({ companyProfits: response.data });
+      }
+      async componentDidUpdate(prevProps){
+        const id = this.props.match.params.id;
+        if(id === prevProps.match.params.id){
+          return;
+        }
+        const response = await axios.get(`https://acme-users-api-rev.herokuapp.com/api/companies/${id}/companyProfits`)
+        this.setState({ companyProfits: response.data });
+
+      }
+      render(){
+        const { companyProfits } = this.state;
+        return (
+          <ul>
+            {
+              companyProfits.map( companyProfit => <li className='companyItem' key={ companyProfit.id}>
+                <div className='year'>
+                  { moment(companyProfit.fiscalYear).format('YYYY') }
+                </div>
+                ${ companyProfit.amount } 
+              </li>)
+            }
+          </ul>
+        );
+      }
+    }
+
+
+    const Home = ()=> {
+      return <div id='home'>Welcome!!</div>;
+    };
+
+    class App extends Component{
+      constructor(){
+        super();
+        this.state = {
+          companies: []
+        };
+      }
+      async componentDidMount(){
+        const response = await axios.get('https://acme-users-api-rev.herokuapp.com/api/companies')
+        this.setState({ companies: response.data });
+      }
+      render(){
+        const { companies } = this.state;
+        return (
+          <HashRouter>
+            <Route render={({ location })=> <Nav path={ location.pathname } companies={ companies } />} />
+            <Switch>
+              <Route exact path='/' component={ Home } />
+              <Route path='/companies/:letter?' render={ (props)=> <Companies {...props} companies={ companies } /> } />
+            </Switch>
+          </HashRouter>
+        );
+      }
+    }
+    const root = document.querySelector('#root');
+    render(<App />, root);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <!-- react -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+
+    <!-- react dom -->
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+      input,
+      button {
+        height: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+
+  <script type="text/babel">
+    const { render } = ReactDOM;
+    const { Component } = React;
+
+
+    class NameForm extends Component {
+      constructor({ name }) {
+        super();
+        this.state = {
+          name
+        };
+      }
+      render() {
+        const { onChangeName } = this.props;
+        const { name } = this.state;
+        return (
+          <div>
+            <input
+              value={name}
+              onChange={ev => this.setState({ name: ev.target.value })}
+            />
+            <button
+              disabled={name === this.props.name}
+              onClick={() => onChangeName(name)}
+            >
+              Update
+            </button>
+
+            <button onClick={() => this.setState({ name: this.props.name })}>
+              Cancel
+            </button>
+          </div>
+        );
+      }
+    }
+
+    class App extends Component {
+      constructor() {
+        super();
+        this.state = {
+          name: "foo"
+        };
+        this.onChangeName = this.onChangeName.bind(this);
+      }
+
+      onUpdate() {}
+
+      componentDidMount() {}
+
+      onChangeName(name) {
+        this.setState({ name });
+      }
+
+      render() {
+        const { name } = this.state;
+        const { onChangeName } = this;
+        return (
+          <div>
+            <h1> The name is {name.length} characters long </h1>
+            <NameForm name={name} onChangeName={onChangeName} />
+          </div>
+        );
+      }
+    }
+
+    const root = document.querySelector("#root");
+    render(<App />, root);
+  </script>
+</html>

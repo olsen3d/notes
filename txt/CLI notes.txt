@@ -1,0 +1,112 @@
+CLI - Command Line Interface
+    - text based interface
+    - opposite of a GUI 
+
+Advantages: 
+    speed
+    system resouces
+    diversity - the interface wont change much
+    flexible and powerful - can run scripts
+
+Command    flag        argument
+   rm      -f       foundations.txt
+
+-----------
+| COMMAND |
+-----------
+
+    CTRL + c : stop execution of the current Command
+    CTRL + a : Move to front
+    CTRL + e : Move to end
+    CTRL + u : Clear the current line
+    CTRL + l : Clear the terminal window (does not clear history)
+    Up Arrow : Go to previous command
+    Down Arrow : Go to next command
+
+    ls : List (lists the directories and files in the current directory)
+
+    ls -a : List all (displays all of the "hidden" files in a directory)
+
+    ls -R : List all files recursively in folders below
+
+    ls + <directory> : List Directory (lists the directories and files in the specified directory (ls ~/Applications)
+
+    pwd : Print working directory (prints out the file path of the current directory)
+
+    man + <command> : Manual (displays the manual for the current command) (man ls)
+
+    top : Displays active processes. Press q to Quit
+
+    clear : clears the screen
+
+    history (n) : History of the last typed items - replace (n) with a number (somewhere like 10)
+
+    q : Quit (another "get out of trouble" command. Try q when CTRL + C doesn't work.)
+
+    !(type) : this will find a matching command in your history and run it. ex. !sou = source ~/.bash_profile
+
+    cat <file> : display content of a text file in the terminal
+
+----------------------
+| COMMAND LINE LINGO |
+----------------------
+
+    File Path : A printout of the absolute location of a file on the filesystem.
+    Directory : A "folder"
+    Standard Output : The output in the Command Line after a command (often displayed as stdout)
+    Standard Input : The input in the Command Line before a command (often displayed as stdin)
+
+
+
+All UNIX filesystems are organized within a single tree structure under one root directory
+
+bin = binaries contains administrative things
+usr = unix system resources
+
+------------
+| MOVEMENT |
+------------
+
+    pwd : echo the present working directory
+    cd : change directory to home directory
+    cd .. : go up one level
+    cd ../../ : go up 2 levels and so on
+
+---------------
+| DIRECTORIES |
+---------------
+
+    mkdir + <directory_name> : Make Directory (create a directory with the specified name) 
+
+    mkdir + <directory1> + <directory2> + <directory3>... : Make Directory (make multiple directories at once) (mkdir Folder1 Folder2 Folder3)
+
+    touch + <filename> : Touch (create a file with the specified name) (touch myNewFile.js)
+
+    mv + <file_to_move> + <destination_path> : Move (move a file or folder to the specified location) (mv myNewFile.js ../Fullstack_Stuff/myNewFile.js)
+
+    mv + <file_to_rename> + <new_filename>: Rename (mv can also be used to rename a file) (mv typoo.js typo.js)
+
+    rmdir : remove directory - be careful with this one!
+
+
+
+
+
+---------------
+| CUSTOM BASH |
+---------------
+
+~/.bash_profile
+
+export CLICOLOR=1
+export LSCOLORS=exxxxxxxxx
+export TERM=xterm-256color
+alias hist='history 10'
+
+export PS1="\]\[\033[38;5;6m\]╔╣\[$(tput sgr0)\]\[\033[38;5;32m\]@\u\[$(tput sgr0)\]\[\033[38;5;6m\]║\[$(tput sgr0)\]\[\033[38;5;11m\] \w\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]\n\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;6m\]╚═➜ \[$(tput sgr0)\]"
+
+https://geoff.greer.fm/lscolors/
+
+http://bashrcgenerator.com/
+
+

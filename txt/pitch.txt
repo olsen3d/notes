@@ -1,0 +1,25 @@
+my pitch
+
+be HHS
+Hungy, Humble, Smart
+
+Past -> A-ha -> Vision
+
+make a personal brand in every interview be consistent
+
+Past:
+I have about 10 years of experience in automotive and architecture visualization. During that time I worked my way up to a Senior 3d visualization artist. 
+
+If you are unfamiliar with that field it invloves a lot of problem solving - mainly figuring out how to do something, then how to do it more efficiently with the least amount of resources. (sometimes a render can take say 5 hours a frame, rendering an animation thats 24 frames per second, so if you can cut it down to 2 hours a frame with no reduction in quality then that is a huge win)
+
+In my present role I began writing time saving (and sanity saving) workflow scripts for my team in Maxscript (similar to python when working with 3d objects) that will help the team do tedious tasks faster, make difficult tasks easier, and overall cut days off of each project.
+
+A-ha:
+My a-ha moment was that I can write code like this all the time 
+
+Vision:
+My vision is to create some of these tools to help your team 
+
+proficient, knowledgeale, familiar
+first bullet line humble brag
+quantify your impact

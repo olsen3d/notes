@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <!-- react -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+
+    <!-- react dom -->
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+      input,
+      button {
+        height: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+
+  <script type="text/babel">
+    const { render } = ReactDOM;
+    const { Component } = React;
+
+    class NameForm extends Component {
+      constructor({ firstName, lastName }) {
+        super();
+        this.state = {
+          firstName,
+          lastName
+        };
+        this.onChangeUser = this.onChangeUser.bind(this);
+      }
+      onChangeUser(ev) {
+        this.setState({ [ev.target.name]: ev.target.value });
+      }
+      render() {
+        const { firstName, lastName } = this.state;
+        const disabled =
+          firstName === this.props.firstName &&
+          lastName === this.props.lastName;
+        return (
+          <div>
+            <input
+              name="firstName"
+              value={firstName}
+              onChange={this.onChangeUser}
+            />
+            <input
+              name="lastName"
+              value={lastName}
+              onChange={this.onChangeUser}
+            />
+            <button
+              onClick={() => this.props.onChangeUser(this.state)}
+              disabled={disabled}
+            >
+              Update
+            </button>
+          </div>
+        );
+      }
+    }
+
+    class App extends Component {
+      constructor() {
+        super();
+        this.state = {
+          firstName: "foo",
+          lastName: "bar"
+        };
+        this.onChangeUser = this.onChangeUser.bind(this);
+      }
+
+      onChangeUser(change) {
+        this.setState(change);
+      }
+
+      render() {
+        const { firstName, lastName } = this.state;
+        const { onChangeUser } = this;
+        return (
+          <div>
+            <h1>
+              Hello {firstName} {lastName}!
+            </h1>
+            <NameForm
+              firstName={firstName}
+              lastName={lastName}
+              onChangeUser={onChangeUser}
+            />
+          </div>
+        );
+      }
+    }
+
+    const root = document.querySelector("#root");
+    render(<App />, root);
+  </script>
+</html>

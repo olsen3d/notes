@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- react -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <!-- more react -->
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <!-- react router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.0.1/react-router-dom.js"></script>
+
+    <!-- google fonts  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:200&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        background-color: #222222;
+        font-family: sans-serif;
+        color: white;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: lightgray;
+        padding: 1rem;
+      }
+
+      nav > * {
+        padding: 1rem;
+        color: black;
+        background-color: lightseagreen;
+        border-radius: 0.5rem;
+      }
+
+      nav > *.selected {
+        background-color: tomato;
+        color: white;
+        border-radius: 0.5rem;
+      }
+
+      main {
+        display: flex;
+      }
+      main > * {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/babel">
+    const API = "https://acme-users-api-rev.herokuapp.com/api";
+    const root = document.querySelector("#root");
+    const { Component } = React;
+    const { render } = ReactDOM;
+    const { HashRouter, Link, Route } = ReactRouterDOM;
+
+    const Nav = ({ location }) => {
+      const { pathname } = location;
+
+      return (
+        <nav>
+          <Link to="/" className={pathname === "/" ? "selected" : ""}>
+            Home
+          </Link>
+          <Link to="/users" className={pathname === "/" ? "" : "selected"}>
+            Users
+          </Link>
+        </nav>
+      );
+    };
+
+    const Loader = (waiting) => {
+        console.log(waiting)
+        if (waiting) return <h2>Click a user</h2>
+        else return <h2>User Bio</h2>
+    }
+
+    class User extends Component {
+      constructor() {
+        super();
+        this.state = {
+          user: {},
+          waiting: true
+        };
+      }
+
+      componentDidUpdate(prevProps) {
+        if (prevProps.match.params.id !== this.props.match.params.id) {
+          axios
+            .get(`${API}/users/detail/${this.props.match.params.id}`)
+            .then(response => this.setState({ user: response.data }));
+        }
+        if (this.state.waiting) this.setState({waiting: false})
+      }
+
+      componentDidMount() {
+        axios
+          .get(`${API}/users/detail/${this.props.match.params.id}`)
+          .then(response => this.setState({ user: response.data }));
+      }
+
+      render() {
+        const { user, waiting } = this.state;
+        return (
+          <div>
+            {Loader(waiting)}
+            {user.bio}
+          </div>
+        );
+      }
+    }
+
+    const Users = ({ users }) => {
+      return (
+        <div>
+          <h2>Users</h2>
+          <ul>
+            {users.map(user => {
+              return (
+                <li key={user.id}>
+                  <Link to={`/users/${user.id}`}>{user.fullName}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      );
+    };
+
+    class App extends Component {
+      constructor() {
+        super();
+        this.state = {
+          users: []
+        };
+      }
+      componentDidMount() {
+        axios
+          .get(`${API}/users`)
+          .then(response => this.setState({ users: response.data.users }));
+      }
+
+      render() {
+        const { users } = this.state;
+
+        return (
+          <HashRouter>
+            <Route component={Nav} />
+            <main>
+              <Route path="/users" render={() => <Users users={users} />} />
+              <Route path="/users/:id" component={User} />
+            </main>
+          </HashRouter>
+        );
+      }
+    }
+
+    render(<App />, root);
+  </script>
+</html>

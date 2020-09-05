@@ -1,0 +1,24 @@
+project ideas for portfolio
+or projects from front-end interview assessments
+
+a wallet/bank app BETTERMENT CLONE WITH INVESTMENT CHARTS AND GRAPHS
+-> show credit card cards on the side
+----> logo
+----> numbers with security like **** **** **** 1234
+----> edit / remove
+
+-> show transaction on right side
+----> current balance with $$$
+
+--> transaction cards
+----> show company or product
+----> show amount
+----> transaction type and date
+----> plus sign to expand to show more info 
+
+service request dashboard like NYC 311
+-> show outstanding requests
+-> show completed requests
+-> map with request data
+https://github.com/cityofasheville/Digital-Services-Developer
+

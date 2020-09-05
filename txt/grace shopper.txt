@@ -1,0 +1,31 @@
+e commerce website
+agile development
+
+stand up -
+  daily for 15 minutes
+  stay updated on everyones work
+  what did i do yesterday?, today, do i have blockers?
+  blocker is something outside of your control
+  and your progress
+
+git
+
+create an org and add everyone else
+create a git project
+
+feature branches
+never work directly on master
+
+
+user story
+as a visitor i want to see all the products and i want to see more details or add it to my cart right away
+
+sort out linters and prettier beforehand
+you can set up prettier in package.json
+
+continuous integration deploy often every day
+
+new this on the block
+d 
+yeungg lo
+mike

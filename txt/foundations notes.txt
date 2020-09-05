@@ -1,0 +1,44 @@
+where i left off:
+
+12 design functions
+
+03 factory functions - human calculator
+
+
+object creational patterns (aka design paterns)
+    solving a concern: the creation and the structure of objects
+
+    1 factory functions 
+    2 constructor functions
+    3 classes
+
+console.dir(object) - this will give you a console of all the properties of the object or array or variable etc.
+
+a wrapper object is temporarily created when you call a method on a primitive data type - that object will have access to the methods
+
+[PROTOTYPES]
+
+prototype is an internal property every object contains and its value is a reference to another object
+
+in the documents the [] around something means it is a hidden proterty
+
+dunder means double underscore like when __proto__  "dunder proto"
+
+ a function remembers the lexical environment that it was created in. you can then call that function later with all the variables from its lexical scope with no errors. this concept is called closure.
+
+ a method is just a property with a value that is a function
+ 
+ you can call that function aka invoke a method
+
+ .map needs a return statement. it returns to the variable that it was called for with an equal length of the array that was passed into it.  the .forEach method does not return anything.
+  
+  reduce is better when you only want to return a single statement. for example when you want to return the total price of a shopping list.
+  
+  all fucntions have access to the call method. which will let you use the explicit binding rule which will let you pick the context of 'this'
+
+
+
+
+  --------------
+  --- REVIEW ---
+  --------------

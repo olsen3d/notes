@@ -1,0 +1,8 @@
+git diff
+
+git checkout .
+
+thursday
+promises and vanilla stuff
+resolve/reject in testing delay function
+

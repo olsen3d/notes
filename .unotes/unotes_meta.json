@@ -1,0 +1,106 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "algos": {
+      "name": "algos",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "Authentication": {
+      "name": "Authentication",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "codeWars_LeetCode": {
+      "name": "codeWars_LeetCode",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "coursera": {
+      "name": "coursera",
+      "isOrdered": true,
+      "folders": {
+        "divide and conquer": {
+          "name": "divide and conquer",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "Information Visualization": {
+          "name": "Information Visualization",
+          "isOrdered": true,
+          "folders": {},
+          "files": {
+            "notes": 0
+          }
+        }
+      },
+      "files": {}
+    },
+    "css": {
+      "name": "css",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "data structures": {
+      "name": "data structures",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "Excalidraw": {
+      "name": "Excalidraw",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "js": {
+      "name": "js",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "junior-phase": {
+      "name": "junior-phase",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "reactos": {
+      "name": "reactos",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "settings": {
+      "name": "settings",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "sorting": {
+      "name": "sorting",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "templates": {
+      "name": "templates",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "txt": {
+      "name": "txt",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    }
+  },
+  "files": {}
+}

@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <!-- react -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+
+    <!-- react dom -->
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+
+  <script type='text/babel'>
+    const { render } = ReactDOM;
+    const { Component } = React;
+
+    class App extends Component {
+      constructor() {
+        super();
+        this.state = {
+          property: "value"
+        };
+      }
+
+      onUpdate() {}
+
+      componentDidMount() {}
+
+      render() {
+        const { property } = this.state;
+        return <h1> React Template </h1>
+      }
+    }
+
+    const root = document.querySelector("#root");
+    render(<App />, root);
+  </script>
+</html>

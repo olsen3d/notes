@@ -1,0 +1,39 @@
+Git is a version control system or VCS
+
+git init - run this in your project folder to initialize git and create a hidden folder creating a repository
+
+staging area - between local and commit
+
+git add
+git commit -m "message here"
+git status
+git log
+git init
+git remote -v
+git push -u origin master
+git clone and paste the url
+
+
+clone and fork
+
+forking adds a repository to your github account
+cloning it adds it to your local machine
+
+mkdir - make a directory for your project
+cd  - move into the directory 
+touch file.js  - create a javascript file
+code file.js - open the file in vscode and do code
+git init - initialize git into this project folder
+git add file.js - add the javascript file to the git staging area
+git commit -m 'message' - commit the files in the staging area to 
+on github make a new repository 
+git remote add origin github.com/olsen3d/......
+git push origin master - push your files to github
+
+
+
+
+npm test
+
+delete your git folder
+rm -rf .git

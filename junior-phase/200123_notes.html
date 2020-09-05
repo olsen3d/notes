@@ -1,0 +1,45 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>foo</div>
+        <div>bar</div>
+
+
+        <script>
+            const ul = document.querySelector('div')
+            const list = document.querySelectorAll('div')
+            const listArray = [...document.querySelectorAll('div')]
+
+            const hasfoo = listArray.filter( div => div.innerHTML === 'foo')
+
+            console.log(hasfoo)
+
+
+            const render = () => {
+                const html = data.map( num => {
+                    return `<li>${num}<li/>`
+                }).join('')
+                list.innerHTML = html
+            }
+
+
+            list.addEventListener('click', (ev) => {
+                if (ev.target.tagName === 'LI') {
+                    ev.target.parentNode.removeChild(ev.target)
+
+                }
+            })
+
+            const numfavs = employees.filter( emp => emp.favorite).length
+
+            if (target.classList.contains('favorite') && numfavs < 3)
+
+
+        </script>
+
+        <script src='app.js' defer></script>
+
+    </body>
+</html>

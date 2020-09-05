@@ -1,0 +1,1 @@
+curl 'https://acme-users-api-rev.herokuapp.com/api/users/81eecff6-eee0-4395-9ac7-83a586e7ecdd/notes' -X POST -d '{"archived": false, "text": "something2" }' -H "Content-Type:application/json"

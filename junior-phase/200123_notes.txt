@@ -1,0 +1,58 @@
+
+const divVar = document.querySelector('div')
+const list = [...document.querySelector('#list')]
+('#list')
+
+const data = [
+    {
+        value: 7,
+        islucky: true
+    },
+    {
+        value: 4
+    }
+]
+
+data.forEach(item => {
+    const li = document.createElement('li')
+    if (item.isLucky) {
+        li.className = 'lucky'
+    }
+    const span = document,createElement('span')
+    span.innerHTML = item.value
+    li.append(span)
+    list.append(li)
+})
+
+
+div.addEventListener('click', (ev) => {
+    console.log(ev.target)
+})
+
+//this will give us what is inside of the thing that we click on
+div.addEventListener('click', (ev) => {
+    if (ev.target.tagName === 'P') {
+        console.log(ev.target.innerHTML)
+    }
+})
+ev.stopPropagation to stop it propagating upwards
+
+<input name='foo'/>
+
+document.querySelector('div')
+
+<script src='app.js' defer></script> this will load at the end of the document
+
+echo '*swp' >> .gitignore
+
+data-id if you are creating a template literal with an id is an <ul>
+console.log(target.getAttribute(data-id))
+
+employees[idx].favorite = !!
+
+window.localStorage
+window.localStorage.setItem('foo', foo)
+window.localStorgar.getItem('foo')
+
+window.localStorage('foo', JSON.stringify(foo))
+JSON.parse(window.localStorage.getItem('foo'))

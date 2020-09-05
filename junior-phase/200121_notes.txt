@@ -1,0 +1,32 @@
+
+selectors
+
+div = <div>
+.div = class='div'
+#div = id='div'
+
+divs by default are block elements
+
+flex default is on a row
+they will only take up as much space as they need
+
+flex: is part of the pie
+flex: 1 = 25%
+flex: 3 = 75%
+display: flex = flex container
+
+flex-direction: row or column
+column-reverse
+
+justify-content = horizontal
+    flex start
+    flex end
+    center
+align-items = vertical
+
+align-content = sort of treats all items as a flexbox - only really matters if you spec a height in your main
+    center
+    space between
+    
+
+<body id='list'>

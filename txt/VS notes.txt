@@ -1,0 +1,25 @@
+
+-----------
+| HOTKEYS |
+-----------
+
+    ctrl + option + space : command palette
+
+    'side bar'
+    'activity bar'
+    'output'
+    'clear'
+    'close panel'
+
+    option + command + 
+
+    left/right = move to next editor or terminal
+    E = focus editor
+    T = focus terminal
+    M = maximize terminal
+
+    ctrl + shift + right = expand selection to word
+    ctrl + shift + left = reduce selection
+
+    option + up/down = move line 
+    option + up/down = duplicate line

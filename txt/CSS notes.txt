@@ -1,0 +1,20 @@
+<style>
+bar.foo = you are both of these together in one tag
+.bar .foo = you are a descendent of a class
+.bar > .foo = you are a direct descendent of a class
+
+<!--comment>
+<main>
+
+stylesheet styles.css 
+<link rel=''>
+
+align-content: center
+flex start
+flex end
+space around
+space between
+
+
+
+<!-- comment -->

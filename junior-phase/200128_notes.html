@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <ul id='companiesList'></ul>
+        <ul id='productsList'></ul>
+    </body>
+    <script>
+    const companyList = document.querySelector('#companiesList')
+
+    companyList.addEventListener ('click', (ev) => {
+        const target = ev.target
+        if (target.tagName === 'A') {
+            const id = target.getAttribute('data-id')
+
+        fetch(`https://acme-users-api-rev.herokuapp.com/api/companies/${id}/companyProfits`)
+        .then( response => response.json())
+        .then((result) => console.log(result))
+        }
+    })
+
+    const renderCompanies = (companies) => {
+        const html = companies.map( company => {
+            return `<li>
+                ${company.name}
+                <a href = '#${company.id}' >
+                    show profits
+                    </a>
+                </li>`
+        }).join('')
+
+        companyList.innerHTML = html
+    }
+    
+    fetch('https://acme-users-api-rev.herokuapp.com/api/companies')
+        .then( response => response.json())
+        .then((result) => renderCompanies(result))
+
+    </script>
+</html>
+

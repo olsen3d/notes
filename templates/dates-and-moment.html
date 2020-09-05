@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <!-- moment library cdn -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+    </head>
+    <style>
+        * {
+            background-color: #333333;
+        }
+    </style>
+    <script>
+    //using the built in javascript date object
+            const now2 = new Date()
+            console.log(now2)
+            
+            const halloween2 = new Date('10/31/20')
+            console.log(halloween2)
+            
+            // milliseconds > seconds > hours > days
+            const diff2 = (halloween2 - now2) / 1000 / 60 / 60 / 24
+            console.log(diff2)
+
+    // using the moment library
+            const now = moment()
+            console.log(now.toDate())
+
+            const halloween = moment('10/31/2020')
+            console.log(halloween.toDate())
+
+            //options include seconds, minutes, days, years etc.
+            const diff = halloween.diff(now, 'days')
+            console.log(diff)
+
+            //second arg can be used to parse the data tell it how to read the date
+            const christmas = moment('25-12-20', 'DD-MM-YY')
+            console.log(christmas.toDate())
+
+            const independenceDay = moment('04-07-20', 'DD-MM-YY')
+            //consult https://momentjs.com/ to see more formatting options
+            console.log(independenceDay.format('dddd'))
+
+    </script>
+</html>
+

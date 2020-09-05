@@ -1,0 +1,18 @@
+promises
+async
+
+take data from multiple sources on the server
+
+start.txt
+x.txt
+y.txt
+
+nodemon app.js
+
+promise states :
+
+need cd for resolving
+and one for rejecting
+
+node exercise-one a
+

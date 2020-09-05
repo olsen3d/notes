@@ -1,0 +1,12 @@
+bring up command palette 
+on keyboard => ctrl + alt + space
+on mac => ctrl + option + space
+
+side bar => toggle sidebar visibility
+folders => focus on folders view
+
+
+close panel => close side panel (output and terminal)
+terminal => open terminal
+output => open output
+clear => clear output

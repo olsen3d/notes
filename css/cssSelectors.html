@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <style>
+      /* this is universal selector it selects ALL */
+      * {
+        background-color: #333333;
+      }
+      /* this is a tag selector it selects all these tags */
+      ul {
+        background-color: lightslategray;
+      }
+      /* this is a class selector */
+      .red {
+        background-color: #cc2211;
+      }
+      /* id selector */
+      #green {
+        background-color: lightseagreen;
+      }
+      /* selects all divs with red class */
+      div.red {
+        color: white;
+      }
+      /* OR - a comma selects multiple tags */
+      span, li {
+        position: relative;
+      }
+      /* UNDER - a space selects a tag under a tag, direct or not */
+      ul li {
+        background-color: yellowgreen;
+      }
+      /* selects an red class under a div */
+      div .red {
+        background-color: #cc2211;
+      }
+      /* selects a red class DIRECTLY under a div */
+      div > .red {
+        background-color: #cc2211;
+      }
+      /* select EVERY li sibling after a li with red class */
+      li.red ~ li {
+        background-color: tomato;
+      }
+      /* selects the very next sibling after an li with red class */
+      li.red + li {
+        color: whitesmoke;
+      }
+      /* pseudo selector when hovering */
+      li:hover {
+        background-color: lightskyblue;
+      }
+
+      /* pseudo selectors */
+      input:focus {
+        background-color: maroon;
+      }
+      input:required {
+        background-color: mediumseagreen;
+      }
+      input:checked {
+        margin: 20px;
+      }
+      input:disabled {
+        background-color: gray;
+      }
+
+      /* children selectors */
+
+      li:first-child {
+        border: green 3px solid
+      }
+      li:last-child {
+        border: burlywood 3px solid
+      }
+      li:nth-child(3) {
+        border: violet 3px solid
+      }
+      /* select every second element */
+      li:nth-child(2n) {
+        color: yellow;
+      }
+      span:only-child {
+        background-color: turquoise;
+      }
+      li:not(.red) {
+        color: yellowgreen;
+      }
+      div.red::before {
+        content: 'before ';
+      }
+      div.red::after {
+        content: ' after';
+      }
+      [data-red="yep"] {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- this has one class -->
+    <div class='red'>this is a div</div>
+
+    <!-- this has 2 classes -->
+    <div class='blue orange-text'>this is also a div</div>
+
+    <span id='green'>This is a span</span>
+
+    <ul>
+      <li>item 1</li>
+      <li class='red'>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+      <li>item 6</li>
+      <li>item 7</li>
+      <li>item 8</li>
+      <li>item 9</li>
+    </ul>
+
+    <input type='text' />
+    <input type='checkbox' />
+    <input disabled type='checkbox' />
+    <input required type='text' />
+
+    <div data-red='yep'> data attribute</div>
+
+  </body>
+</html>

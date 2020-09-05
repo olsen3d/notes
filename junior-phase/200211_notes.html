@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- react -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+
+  <script type="text/babel">
+    //asyc await
+    const laodUser = async () => {
+      try {
+        const user = (await axios.get("api url here")).data;
+        console.log(user);
+      } catch (ex) {
+        console.log(ex);
+      }
+    };
+
+    // axios.get
+    // axios.delete
+    // axios.post
+    // axios.put
+    const API = "https://acme-users-api-rev.herokuapp.com/api"
+
+    // const user = fetch(`${API}/users/random`)
+    //     .then(response => response.json())
+    //     .then(result => console.log(result))
+
+
+    const fetch = async() => {
+        const user = {id: 'f1fe72fa-1f63-4bcf-8107-a1c45de33a14' }
+        let notes = (await axios.get(`${API}/users/${user.id}/notes`)).data
+        let companies = (await axios.get(`${API}/companies`)).data
+        console.log(notes)
+
+        // const deleter = (await axios.delete(`${API}/users/${user.id}/notes/${notes[0].id}`))
+        // const note = (await axios.post(`${API}/users/${user.id}/notes`, {text: 'hello my name is mike'}))
+    }
+
+    fetch()
+
+  </script>
+</html>

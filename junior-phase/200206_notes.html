@@ -1,0 +1,43 @@
+<html>
+    <head>
+
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    </head>
+
+    <body>
+
+        <div id='root'></div>
+
+    </body>
+    <script>
+        const root = document.querySelector('#root')
+        ReactDOM.render(React.createElement('hr'), root)
+
+        const colors = [ 'red', 'blue', 'green']
+
+        class App extends React.Component {
+            //react automatically calls this with the props you put in
+            constructor() {
+                super()
+                this.state = {
+                    colors
+                }
+            }
+        }
+
+        render() {
+                    const removeColor = (colorToRemove) => {
+                        const updated = this.state.colors.filter( color => color !== colorToRemove)
+                const { colors } = this.state
+                this.setState({ colors: updated})
+                return React.createElement('button', root)
+            }
+        }
+
+
+    </script>
+</html>
+
+

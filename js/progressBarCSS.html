@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #333333;
+        color: snow;
+      }
+
+      .bar-container {
+        width: 200px;
+        height: 30px;
+        margin: 40px;
+        background-color: tomato;
+      }
+
+      .bar {
+        background-color: lightseagreen;
+        height: 100%;
+        width: 0%;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Progress Bar</h1>
+    <div class="bar-container">
+      <div class="bar"> </div>
+      <button onclick="fillBar(2)">Start</button>
+    </div>
+
+  </body>
+  <script>
+    const fillBar = seconds => {
+      const bar = document.querySelector('.bar')
+      bar.style.width = '100%'
+      bar.style.transition = `${seconds}s linear width`
+    }
+  </script>
+</html>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type ='text/babel'>
+
+    <br />
+   const NavButton = props => <a> {props.title} </a>
+
+    <nav>  
+    <NavButton title={props.name} />
+    </nav>
+
+    const Main = () => <div className='main'> this is the main </div>
+
+    return <div>
+        <Nav name ={this.state.name} tabs={this.state.tabs} />
+        <Nav {...this.state} />
+
+        </div>
+
+
+
+        <HashRouter>
+            <Route path="/a" component="main" />
+            <Route path="/b"> main </Route>
+            <Route path="/c">
+                <Redirect to="/a" />
+            </Route>
+        </HashRouter>
+
+
+</script>
+</html>

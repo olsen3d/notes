@@ -1,0 +1,63 @@
+<!-- //react test prework -->
+
+<html>
+    <head>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script>
+        //Component must be capitalized
+        const { Component } = React 
+        const { render } = ReactDOM
+        const root = document.querySelector('#root')
+
+        const Loader = () => React.createElement('div', null, '...waiting for data')
+
+        const Item = ({ number, removeItem }) => {
+            return React.createElement('li', { onClick: removeItem}, number)
+        }
+        const List = ({ numbers, removeItem }) => {
+             //react likes to keep track of everything so you need a key prop on pretty much everything
+            const lis = numbers.map( (number, idx) => React.createElement(Item, { number, key: idx, removeItem: () => {removeItem(idx)} }))
+            return React.createElement('ul', null, lis)
+        }
+        
+        class App extends Component {
+            constructor() {
+                super()
+                //the state always has to be an object
+                this.state = {
+                    numbers: [],
+                    waiting: true
+                }
+            }
+
+            componentDidMount () {
+                setTimeout(()  => {
+                    this.setState( {
+                        numbers: [ 1, 2, 3, 9, 3, 5, 6, 6, 8, 11 ],
+                        waiting: false
+                    })
+                }, 2000)
+            }
+
+            render() {
+                const removeItem = (idx) => {
+                    const numbers = this.state.numbers.filter( (number, _idx) => _idx !== idx)
+                    this.setState({ numbers })
+                }
+                const { numbers, waiting } = this.state
+                if (waiting) return React.createElement(Loader)
+                return React.createElement(List, { numbers, removeItem })
+            }
+        }
+        render(React.createElement(App), root)
+    </script>
+</html>
+
+
+
+

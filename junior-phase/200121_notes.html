@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family: sans-serif;
+            }
+            main {
+                display: flex;
+                height: 100vh;
+            }
+            .left {
+                background-color: dodgerblue;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .right {
+                background-color: tomato;
+                flex: 3;
+            }
+
+            @media (max-width: 600px) {
+                main {
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="left"></div>
+            <div class="right"></div>
+        </main>
+    </body>
+</html>

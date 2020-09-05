@@ -1,0 +1,48 @@
+<html>
+  <head>
+
+  </head>
+
+  <body>
+
+  </body>
+<script>
+
+function getUser() {
+    // Return because it returns a promise
+    // first fetch an entire page of users
+    return fetch('https://acme-users-api-rev.herokuapp.com/api/users/0')
+      .then(usersResponse => {
+        // convert the response to the JSON format using fetch's built-in .json() method
+        return usersResponse.json();
+      })
+      .then(usersJSON => {
+        const userId = usersJSON.users[0].id;
+        // Using that userId, lets fetch details about the user.
+        return fetch(`https://acme-users-api-rev.herokuapp.com/api/users/detail/${userId}`);
+      })
+      .then(userResponse => {
+        // convert to json again
+        return userResponse.json()
+      })
+      .then(userJSON => {
+        // finally, we have a single user object
+        console.log(userJSON);
+        return userJSON;
+      });
+}
+
+// Runs it
+getUser();
+
+// Runs it and does something with the return value:
+getUser()
+  .then(user => console.log('I am logging it by .then on the function itself because it returns a promise!', user));
+
+
+</script>
+
+
+  </html>
+
+

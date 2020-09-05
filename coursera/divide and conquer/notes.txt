@@ -1,0 +1,19 @@
+----------------------------------------
+|     Divide and Conquer Algorithms    |
+----------------------------------------
+
+refuse to be content! can we do better?
+
+Karatsuba multiplication
+
+ 5678
+*1234
+
+x=5678, y=1234 compute x*y
+break it down a=56 b=78 c=12 d=34
+
+recursive compute a*c
+recursive compute b*d
+recursive compute (a+b) (c+d) gauss trick: a*d + b*c 
+pad zeros and make additions
+

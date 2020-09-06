@@ -141,7 +141,7 @@ Faceting (small multiples) can be applied to any other graph:
     * **Order** \- position\, texture/density\, color intensity
     * **Categories** \- position\, color hue\, shape or symbols
     * The visual representation should represent all and only the relationships that exist in the data. Ordered data should not appear as unordered and vice versa. Example - having categorical data on the X axis of a line chart doesn't make sense. Example - a diverging color map (a matrix of 2 categorical with each cell colored by a quantitative value each diverging up or down from 0) using a non diverging scale like cuisine score from 0-100.
-2. **Effectiveness** \- \(*How well* it can be expressed) The relevance of the information should match the effectiveness of the channel. Represent important information with more effective channels. Ex - 2 bars of different color but equal length - try to determine how much bigger B is than A. You can't, the color has no effect, length would be a more effective channel to use. different channels convey quantitative information (ex. magnitude), more or less effectively.
+2. [**Effectiveness**](#effectiveness2) \- \(*How well* it can be expressed) The relevance of the information should match the effectiveness of the channel. Represent important information with more effective channels. Ex - 2 bars of different color but equal length - try to determine how much bigger B is than A. You can't, the color has no effect, length would be a more effective channel to use. different channels convey quantitative information (ex. magnitude), more or less effectively.
 
 Magnitude (*Quantitative*) channels: *Ordered* attributes **Effectiveness** ranked:
 
@@ -223,7 +223,7 @@ Bar       ->  Category
 
 Graphical properties -> Object properties
 <br>
-### Effectiveness of Visual Channels
+### <a name="effectiveness2">Effectiveness of Visual Channels</a>
 <br>
 **Accuracy** \- How well can you estimate magnitudes
 
@@ -273,12 +273,13 @@ Graphical properties -> Object properties
 **Grouping** \- how easy is it to see pattern formation
 
 * **Gestalt laws of grouping** \- visualization is about pattern identification\. But what makes patterns emerge?
+* Order (lowest to heighest): Similarity > Proximity > Enclosure & Connection
     * **Proximity** \- If objects positioned in proximity they are perceived as a group\. On a scatter plot dots *clustered* around one value (a *cluster*).
     * **Similarity** \- If objects share a visual property they are a group\. Some dots are gray some are black\, or some are an X and some are an O\. \(Color and shape\)\.
     * **Connection** \- If objects are connected they are a group\. A line between 2 squares groups them regardes of their color \(over ruling the law of similarity\)\.
     * **Enclosure** \- If objects enclosed by a contour are a group\. A circle or some kind of box bordering objects groups them\. Bubble sets
-    * **Closure** -
-    * **Continuity** -
+    * **Closure** \- If there are gaps in open structures they are perceived as closed if it makes sense\. Negative space can look like a group
+    * **Continuity** \- If objects are aligned along a shape or line they are perceived as a group even if there are some gaps in between\. Alignment is very powerful\.
 
 <br>
 <br>

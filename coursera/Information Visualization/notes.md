@@ -262,7 +262,14 @@ Graphical properties -> Object properties
 * If you have a grouped line chart where some values are all close to zero and 2 arent, you can gray out those lower unchanging values for higher *salience*. This offloads the cognitive effort to understand what to attend to.
 * Use color sparingly. learn to love gray shades.
 
-**Separability** \- interference between channels \(color and size\) how do they interact
+**Separability** \- amount of interference between channels \(color and size\) how do they interact
+
+* separating color is easy, shapes, or width and height is not.
+* Position and color are highly seperable so it is easy to focus on one without any interference from the other.
+* Use *integral* dimensions when holistic reading is needed. holistic meaning you want your viewer to react to the 2+ dimensions as one single unit.
+    * Example showing 400 people body mass index each is a circle and then the height is mapped to the height of the elipse and weight to the width of the elipse. It is perceived as one feature of the data. These are *integral* dimensions
+* Use *separable* dimensions when the viewer to focus on one single dimension at the time and then to the other.
+
 **Grouping** \- how easy is it to see pattern formation
 
 <br>

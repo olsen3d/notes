@@ -272,6 +272,14 @@ Graphical properties -> Object properties
 
 **Grouping** \- how easy is it to see pattern formation
 
+* **Gestalt laws of grouping** \- visualization is about pattern identification\. But what makes patterns emerge?
+    * **Proximity** \- If objects positioned in proximity they are perceived as a group\. On a scatter plot dots *clustered* around one value (a *cluster*).
+    * **Similarity** \- If objects share a visual property they are a group\. Some dots are gray some are black\, or some are an X and some are an O\. \(Color and shape\)\.
+    * **Connection** \- If objects are connected they are a group\. A line between 2 squares groups them regardes of their color \(over ruling the law of similarity\)\.
+    * **Enclosure** \- If objects enclosed by a contour are a group\. A circle or some kind of box bordering objects groups them\. Bubble sets
+    * **Closure** -
+    * **Continuity** -
+
 <br>
 <br>
 <br>

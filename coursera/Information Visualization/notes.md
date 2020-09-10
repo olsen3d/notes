@@ -281,12 +281,17 @@ Graphical properties -> Object properties
     * **Closure** \- If there are gaps in open structures they are perceived as closed if it makes sense\. Negative space can look like a group
     * **Continuity** \- If objects are aligned along a shape or line they are perceived as a group even if there are some gaps in between\. Alignment is very powerful\.
 
+## Visualizing data with color
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
+Color is an extremely powerful channel. It is useful for:
+
+1. **Patterns** \- Encoding quantitative values with color to visualize the patterns
+2. **Labeling** \- Label data to distinguish between a set of predefined categories
+3. **Highlighting** \- HIghlight visual elements to draw attention to specific objects
+
+Color Perception
+Color Specification
+
 <br>
 <br>
 <br>

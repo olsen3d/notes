@@ -289,9 +289,26 @@ Color is an extremely powerful channel. It is useful for:
 2. **Labeling** \- Label data to distinguish between a set of predefined categories
 3. **Highlighting** \- HIghlight visual elements to draw attention to specific objects
 
-Color Perception
-Color Specification
+### **Color Perception**
+<br>
+Retina, rods, cones. the optic nerve connects to the brain and is a blind spot. Rods have low light low resolution. Cones have normal light and high resolution. There are 3 types of cones (trichromacy):
 
+* Short wavelength - Red
+* Medium wavelength - Green
+* Long wavelength - Blue
+
+**Color Opponent Process Theory** - We do not perceive color in terms of amount of RGB. The visual cortex combines those to generate color perception we process it as:
+
+1. Red-Green
+2. Blue-Yellow
+3. Black-White (luminance)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+### Color Specification
 <br>
 <br>
 <br>

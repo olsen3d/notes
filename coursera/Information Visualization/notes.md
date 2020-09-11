@@ -313,6 +313,7 @@ Retina, rods, cones. the optic nerve connects to the brain and is a blind spot. 
 Every color can be expressed as the sum of three colors. In a 3D space. gamut is the whole set of colors that can be produced. Not all color spaces can produce all the possible colors. Color spaces define in terms the amount red, green, blue. Color spaces:
 
 * **RGB** \- Red Green Blue \- common in digital devices\. Pixels in an LCD screen\. Color cube\. 0 to 1 all 1 is white\. RGB is not perceptually uniform\. Not very intuitive\. It is tough to for example use yellow and then get different intensities of yellow
+* **HSV/HSL** \- Hue Saturation Value/Lightness \- Easier to use and is a more natural specification\. Hue is the name of the color\. Saturation is how vivid\. Lightness is the brightness\. Cylinder shaped\. Not perceptually uniform\. some colors will have different lightness once you take out the color component\.
 
 <br>
 <br>

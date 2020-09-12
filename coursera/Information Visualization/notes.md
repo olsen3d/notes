@@ -303,11 +303,6 @@ Retina, rods, cones. the optic nerve connects to the brain and is a blind spot. 
 2. Blue-Yellow
 3. Black-White (luminance)
 
-<br>
-<br>
-<br>
-<br>
-<br>
 ### Color Specification
 <br>
 Every color can be expressed as the sum of three colors. In a 3D space. gamut is the whole set of colors that can be produced. Not all color spaces can produce all the possible colors. Color spaces define in terms the amount red, green, blue. Color spaces:

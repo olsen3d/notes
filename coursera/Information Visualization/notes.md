@@ -291,7 +291,7 @@ Color is an extremely powerful channel. It is useful for:
 
 ### **Color Perception**
 <br>
-Retina, rods, cones. the optic nerve connects to the brain and is a blind spot. Rods have low light low resolution. Cones have normal light and high resolution. There are 3 types of cones (trichromacy):
+Retina, rods, cones. the optic nerve connects to the brain and is a blind spot. Rods have low light low resolution. Cones have normal light and high resolution.  Every color can be described as 3 main components. There are 3 types of cones (trichromacy):
 
 * Short wavelength - Red
 * Medium wavelength - Green
@@ -300,7 +300,7 @@ Retina, rods, cones. the optic nerve connects to the brain and is a blind spot. 
 **Color Opponent Process Theory** - We do not perceive color in terms of amount of RGB. The visual cortex combines those to generate color perception we process it as:
 
 1. Red-Green
-2. Blue-Yellow 
+2. Blue-Yellow
 3. Black-White (luminance)
 
 ### Color Specification
@@ -308,12 +308,22 @@ Retina, rods, cones. the optic nerve connects to the brain and is a blind spot. 
 Every color can be expressed as the sum of three colors. In a 3D space. gamut is the whole set of colors that can be produced. Not all color spaces can produce all the possible colors. Color spaces define in terms the amount red, green, blue. Color spaces:
 
 * **RGB** \- Red Green Blue \- common in digital devices\. Pixels in an LCD screen\. Color cube\. 0 to 1 all 1 is white\. RGB is not perceptually uniform\. Not very intuitive\. It is tough to for example use yellow and then get different intensities of yellow\. Not intuitive or uniform
-* **HSV/HSL** \- Hue Saturation Value/Lightness \- Easier to use and is a more natural specification\. Hue is the name of the color\. Saturation is how vivid\. Lightness is the brightness\. Cylinder shaped\. Not perceptually uniform but is intuitive\. some colors will have different lightness once you take out the color component\. 
+* **HSV/HSL** \- Hue Saturation Value/Lightness \- Easier to use and is a more natural specification\. Hue is the name of the color\. Saturation is how vivid\. Lightness is the brightness\. Cylinder shaped\. Not perceptually uniform but is intuitive\. some colors will have different lightness once you take out the color component\.
 * **CIE Lab/Luv** \- Uniform color space L channel is lightness A channel is green/magenta to red B channel is yellow to blue\. Nonlinear transformation of the physical measure\. Designed to be perceptually linear/uniform\. Not as intuitive as the others like HSV\.
 * **CIE Lch/HCL** \- Uniform but also intuitive\. Transformation of cartesian coords of CIE Lab into cylindrical coords\. C is chroma\, relative saturation\. H is hue represented as an angle\. L is lightness
 
 <br>
-<br>
+Why use color?
+
+1. to **Quantify** values - perceiving color to linking color to quantity
+2. to **Label** data - mapping categories to colors.
+
+Quantitative color scales
+
+* **Uniformity** \- as we move through values we want the changes to be perceived uniformly\. No big jumps in scale of colors
+    * Single hue sequential scales - choone one hue then map the value to luminance. H and S are kept constant
+* **Discriminability** \- we want to be able to descriminate as many different colors as possible
+
 <br>
 <br>
 <br>

@@ -318,14 +318,19 @@ Why use color?
 1. to **Quantify** values - perceiving color to linking color to quantity
 2. to **Label** data - mapping categories to colors.
 
-Quantitative color scales
+Quantitative color scales - align the picker vertically
 
 * **Uniformity** \- as we move through values we want the changes to be perceived uniformly\. No big jumps in scale of colors
     * Single hue sequential scales - choone one hue then map the value to luminance. H and S are kept constant
 * **Discriminability** \- we want to be able to descriminate as many different colors as possible
 
 <br>
-<br>
+Multi-hue sequential scales - align the picker diagonally - perceptual sequence preserved. Why use multi-hue? temperature maps
+
+* Aesthetics
+* Higher Descriminability - A larger set of colors to span across. Higher resolution
+* Segmentation and Labeling - communicate 2 pieces of information at once - quantity and segment labels
+
 <br>
 <br>
 <br>

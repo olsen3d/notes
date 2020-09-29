@@ -331,12 +331,25 @@ Multi-hue sequential scales - align the picker diagonally - perceptual sequence 
 * Higher Descriminability - A larger set of colors to span across. Higher resolution
 * Segmentation and Labeling - communicate 2 pieces of information at once - quantity and segment labels
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+Categorical Color Scales - Should be:
+
+* Uniformity = uniform saliency where nothing stands out
+* Discriminibility - as many distinct values as possible - different hues and colors
+* in HCL space choose a constant chroma and luminance and sample uniformly across the hue value. in color picker use H-C
+* [http://tristen.ca/hcl-picker/#/hcl/8/0.83/03A557/EA674A](http://tristen.ca/hcl-picker/#/hcl/8/0.83/03A557/EA674A)
+* You cant really decipher past 5-10 distinct codes. The most unique and stable colors are: red green blue yellow black and white.
+* Red = danger/bad, green = ok/good, gray is perceived as no color meaning it looks like its an unspecified or no category (not important).
+
+Diverging Color Scales - useful to distinguish between quantitative values that are above or below a certain threshold (like altitude and sea level or election votes.)
+Sequential scales dont work. A diverging will encode two properties at the same time:
+
+* Above/below a certain threshold
+* Magnitude
+* Desired properties - same as above + same luminance ramp on both sides (balanced)
+* Join two separate color maps with different hue and the same luminance gradient/steps.
+
+Using color to highlight and emphasize - make everything else gray to make one piece stand out from the rest.
+
 <br>
 <br>
 <br>

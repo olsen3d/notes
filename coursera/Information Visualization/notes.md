@@ -318,20 +318,20 @@ Why use color?
 1. to **Quantify** values - perceiving color to linking color to quantity
 2. to **Label** data - mapping categories to colors.
 
-Quantitative color scales - align the picker vertically
+**Quantitative color scales** \- align the picker vertically
 
 * **Uniformity** \- as we move through values we want the changes to be perceived uniformly\. No big jumps in scale of colors
     * Single hue sequential scales - choone one hue then map the value to luminance. H and S are kept constant
 * **Discriminability** \- we want to be able to descriminate as many different colors as possible
 
 <br>
-Multi-hue sequential scales - align the picker diagonally - perceptual sequence preserved. Why use multi-hue? temperature maps
+**Multi-hue sequential scales** \- align the picker diagonally \- perceptual sequence preserved\. Why use multi\-hue? temperature maps
 
 * Aesthetics
 * Higher Descriminability - A larger set of colors to span across. Higher resolution
 * Segmentation and Labeling - communicate 2 pieces of information at once - quantity and segment labels
 
-Categorical Color Scales - Should be:
+**Categorical Color Scales** \- Should be:
 
 * Uniformity = uniform saliency where nothing stands out
 * Discriminibility - as many distinct values as possible - different hues and colors
@@ -340,7 +340,7 @@ Categorical Color Scales - Should be:
 * You cant really decipher past 5-10 distinct codes. The most unique and stable colors are: red green blue yellow black and white.
 * Red = danger/bad, green = ok/good, gray is perceived as no color meaning it looks like its an unspecified or no category (not important).
 
-Diverging Color Scales - useful to distinguish between quantitative values that are above or below a certain threshold (like altitude and sea level or election votes.)
+**Diverging Color Scales** \- useful to distinguish between quantitative values that are above or below a certain threshold \(like altitude and sea level or election votes\.\)
 Sequential scales dont work. A diverging will encode two properties at the same time:
 
 * Above/below a certain threshold
@@ -350,7 +350,21 @@ Sequential scales dont work. A diverging will encode two properties at the same 
 
 Using color to highlight and emphasize - make everything else gray to make one piece stand out from the rest.
 
-<br>
+**Perceptual issues with color**
+
+* **Color blindness** \- one more photoreceptors are absent or defective\. 10% of male and 1% of female\.
+    * **Deuteranopia** \- no medium or no long wave \(most common\) hard to distinguish red and green
+    * **Tritanopia** \- no short wave\.
+    * Tablaeu has simulations to use color blind palettes
+    * Vischeck - website to check color blindness
+    * **What you can do:**
+        * use safe palettes
+        * blue/orange and blue/red are normally safe
+        * consider vareiations in color intensity
+        * test with a simulator (vischeck)
+* **Size** \- the size of something effects the color that is perceived\.
+    * Small area > High saturation. Large area > Low saturation
+
 <br>
 <br>
 <br>

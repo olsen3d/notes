@@ -364,12 +364,18 @@ Using color to highlight and emphasize - make everything else gray to make one p
         * test with a simulator (vischeck)
 * **Size** \- the size of something effects the color that is perceived\.
     * Small area > High saturation. Large area > Low saturation
+* **Contrast** \- Difference in colors that make them distinguishable \- viz is organized in layers \(background\, foreground objects\, labels\, maps\, grids\, etc\.\.\.\) contrast is needed to separate layers\.
+* **Luminance** \- is the most powerful channel for contrast\.
+* **Background** and perception - bg color can affect the perceived luminance of foreground objects (color constancy). Especially with quantitative color scales.
 
-<br>
-<br>
-<br>
-<br>
-<br>
+### **Color Tools**
+
+**Color Brewer -** [https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
+<span class="colour" style="color: rgb(55, 58, 60);">**Viz Palette:** </span>[https://projects.susielu.com/viz-palette](https://projects.susielu.com/viz-palette "Viz palette")
+color palette copy and paste colorbrewer [https://bl.ocks.org/emeeks/8cdec64ed6daf955830fa723252a4ab3](https://bl.ocks.org/emeeks/8cdec64ed6daf955830fa723252a4ab3)
+Data color picker [http://tristen.ca/hcl-picker/#/hlc/6/1.08/03312F/7FF299](http://tristen.ca/hcl-picker/#/hlc/6/1.08/03312F/7FF299)
+i want hue [https://medialab.github.io/iwanthue/](https://medialab.github.io/iwanthue/)
+
 <br>
 <br>
 <br>

@@ -389,15 +389,19 @@ Data Driven Documents - a javascript library with methods to transform data and 
 
 ### APIs
 <br>
-D3 selections - select elements. note these are different than say a jquery selector. This will return the element with a d3 wrapper around it.
+**D3 selections** \- select elements\. note these are different than say a jquery selector\. This will return the element with a d3 wrapper around it\.
 
 * **d3.select(selector)** this will select the first one with the criteria. d3.select("p") - this will select the first p tag
     * **d3.select("p").select("main")** select the first class of main in the first P
     * let selection = d3.select(whatever) to save it as a variable
 * **d3.selectAll(selector)** \- select all the tags with the criteria
 
-<br>
-<br>
+Changing content - select and then change - get and set
+if you pass in a parameter it sets if no parameter it gets
+
+* d3.select("p").text("this is new text")
+* d3.select("p").html("\<div> add a div \</div>")
+
 <br>
 <br>
 <br>

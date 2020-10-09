@@ -371,11 +371,51 @@ Using color to highlight and emphasize - make everything else gray to make one p
 ### **Color Tools**
 
 **Color Brewer -** [https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
-<span class="colour" style="color: rgb(55, 58, 60);">**Viz Palette:** </span>[https://projects.susielu.com/viz-palette](https://projects.susielu.com/viz-palette "Viz palette")
+<span class="colour" style="color:rgb(55, 58, 60)">**Viz Palette:** </span>[https://projects.susielu.com/viz-palette](https://projects.susielu.com/viz-palette "Viz palette")
 color palette copy and paste colorbrewer [https://bl.ocks.org/emeeks/8cdec64ed6daf955830fa723252a4ab3](https://bl.ocks.org/emeeks/8cdec64ed6daf955830fa723252a4ab3)
-Data color picker [http://tristen.ca/hcl-picker/#/hlc/6/1.08/03312F/7FF299](http://tristen.ca/hcl-picker/#/hlc/6/1.08/03312F/7FF299)
+HCL Data color picker [http://tristen.ca/hcl-picker/#/hlc/6/1.08/03312F/7FF299](http://tristen.ca/hcl-picker/#/hlc/6/1.08/03312F/7FF299)
 i want hue [https://medialab.github.io/iwanthue/](https://medialab.github.io/iwanthue/)
+Adobe color (kuler) [https://color.adobe.com/create/color-wheel](https://color.adobe.com/create/color-wheel)
 
+<br>
+## D3.js
+
+Data Driven Documents - a javascript library with methods to transform data and to draw on web pages
+
+1. transform data to a certain shape we need to create the viz
+2. map the data to image space
+3. compute layout
+4. draw the chart
+
+### APIs
+<br>
+D3 selections - select elements. note these are different than say a jquery selector. This will return the element with a d3 wrapper around it.
+
+* **d3.select(selector)** this will select the first one with the criteria. d3.select("p") - this will select the first p tag
+    * **d3.select("p").select("main")** select the first class of main in the first P
+    * let selection = d3.select(whatever) to save it as a variable
+* **d3.selectAll(selector)** \- select all the tags with the criteria
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>

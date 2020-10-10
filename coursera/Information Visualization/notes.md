@@ -396,16 +396,25 @@ Data Driven Documents - a javascript library with methods to transform data and 
     * let selection = d3.select(whatever) to save it as a variable
 * **d3.selectAll(selector)** \- select all the tags with the criteria
 
-Changing content - select and then change - get and set
+**Changing content** \- select and then change \- get and set
 if you pass in a parameter it sets if no parameter it gets
 
 * d3.select("p").text("this is new text")
 * d3.select("p").html("\<div> add a div \</div>")
 
-<br>
-<br>
-<br>
-<br>
+**Adding Content** \- Append items selection\.append\(tag\)
+ d3.select("ul")
+    .append("li")
+    .text("item 4")
+
+**Removing Content** \- selection\.remove\(\) will remove the element
+you can use css selectors to for example remove the last item of a ul
+
+**Changing the properties** \- change styles and attributes\. selection\.attr\(attribute\,value\)
+d3.select("img")
+    .attr("src","newlogo.png")
+    .style("color","red")
+
 <br>
 <br>
 <br>

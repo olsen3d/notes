@@ -415,14 +415,25 @@ d3.select("img")
     .attr("src","newlogo.png")
     .style("color","red")
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+**Loading data** \- you can load JSON or CSV
+d3.csv("data.csv")
+    .then(callback)
+    .catch(error)
+d3.json("data.json")
+    .then(callback)
+    .catch(error)
+
+You can **sort** using javascript array.sort() with some D3 helper comparators like
+array.sort((a, b) => d3.descending(a,b))
+
+**Data Domain** \- used to create scales
+Range: min and max - d3.max(data[, accessor])
+d3.min(data, d => d.age) returns minimum
+d3.extent(data, d => d.age) returns [min, max]
+
+d3.sum
+d3.mean
+
 <br>
 <br>
 <br>

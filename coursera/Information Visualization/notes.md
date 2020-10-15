@@ -433,15 +433,49 @@ d3.extent(data, d => d.age) returns [min, max]
 
 d3.sum
 d3.mean
+<br>
+### SVG
+<br>
+Similar to HTML uses tags and CSS. Differences - no autolayout they lay on top of eachother. some CSS attributes are different like background color is fill
+Faster than HTML, graphic markdown, main tool for data viz on the web
+Graphic Elements
 
+* \<rect />
+* \<circle />
+* \<line />
+* \<path />
+* \<text />
+
+Non Graphic Elements
+
+* \<g /> group
+    * can now use translate and rotate on the group
+    * control the drawing order - things are rendered one after another so you can draw a g as a placeholder early on
+
+\<svg> \<svg />
+
+Coordinates - 0,0 is the top left. X is horizontal Y is vertical
 <br>
+### Data Binding
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+in d3 data is **binded** through joins. Data (Enter (Update) Exit) Elements
+selection.data(array[, key]) key is like a react key
+    .enter() to enter this set of elements
+    .append("li") to create the elements
+
+.exit() the removed data
+    .remove() to remove it
+
+**numeric scales** \- map the age of a client to a height of the bar
+d3.scaleLinear()
+    .domain([0,64]) the extent of your data. for example ages maximum is 64 minimum is 10 but you want to put 0 as the lowest possible age in a data set.
+    .range([0,300]) range of the visual for example a bar chart going from 0 to 300 pixels
+extent = [min, max]
+
+scale(64) === 300
+
+d3.scaleSqrt() - map the data to the square root - useful for sizing circles as data
+
 <br>
 <br>
 <br>

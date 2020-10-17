@@ -476,6 +476,35 @@ scale(64) === 300
 
 d3.scaleSqrt() - map the data to the square root - useful for sizing circles as data
 
+Ordinal Scales - categorical to value 1:1 mapping between to domain and the range
+let scale = d3.scaleOrdinal()
+    .domain(["A", "B", "C"])
+    .range([10, 8, 6])
+
+so when you call scale on A later you will get as a result:
+scale("A") >> 10
+
+you can also scale to a band say you have 0-100 and 3 priorities low med high you can split it 33/33/33
+
+let scale = d3.scaleBand()
+    .domain(["A", "B", "C"])
+    .range([0, 300])
+this will return the beginning of the band of that element
+scale("B") >> 100
+scale.bandwidth() >> 100
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>

@@ -493,6 +493,131 @@ this will return the beginning of the band of that element
 scale("B") >> 100
 scale.bandwidth() >> 100
 
+notations - axes and grids
+
+d3.axisBottom(scale)
+d3.axisLeft()
+d3.axisRight()
+
+let xScale = scaleLinear()
+let axis = d3.axisBottom(xScale) //create the axis(does not draw)
+axis.ticks(4) //number of ticks
+d3.select("#axis").call(axis) //draw the axis
+
+d3.select("#axis")
+    .append("text")
+    .text("age")
+<br>
+### Lines and Arcs
+<br>
+**Drawing lines** -
+    draw a straight line: SVG \<line x1="50" y1="50" x2="100" y2="100" />
+    or path: \<path d="M150 0 L75 200 L225 200" /> Move to 150,0 draw a Line to 75,200 draw a Line to 225,200
+
+Line Generator - d3 implemation that converts to that path language from your data
+
+lineGenerator = d3.line()
+    .x(d => xScale(d.date))
+    .y(d => yScale(d.price))
+
+d3.select("#chart")
+    .append("path")
+    .datum(data)
+    .attr("d", lineGenerator)
+
+d3.lineRadial(angle and radius)
+
+**Arcs** \- inner radius\, outter radius\, start andle\, and end angle\.
+
+let arcGenerator = d3.arc()
+    .innerRadius(0)
+    .outerRadius(100)
+
+arcGenerator({
+    startAngle: 0,
+    endAngle: Math.PI / 2
+})
+
+Pie Generators - data > angles info
+
+let pieGenerator = d3.pie()
+    .value(d => d.price)
+
+let arcData = pieGenerator(data)
+<br>
+### Maps
+
+needs a projection and a geopath
+
+**projections**
+
+d3.geoNaturalEarth1()
+d3.geoOrthographic().rotate([10,0,0]) you can change the angle
+
+**GeoJson** \- standard format still json but follows rules on what to look like\. has features with geometry and coordinates\.
+{
+    "type": "Feature",
+    "geometry": {
+        "type"
+        "coordinates"
+    }
+}
+
+**Geo Path** \- translates the geojson coordinates to a path on the screen\.
+
+let projection = d3.geoMercator()
+let geoPath = d3.geoPath()
+    .projection(projection)
+chart.selectAll("path")
+    .data(geoJsonData.features)
+    .enter() //check if any new data
+    .append("path")
+    .attr("d", geoPath)
+
+Choropleth map - color fill of a country as a mark. you can update your geojson data properties with the colors of the countries. for example add the population or GDP.
+
+d3.geomercator() can translate marks with lat and lng data to x and y on the screen (similar to mapping like a scale)
+<br>
+### Networks
+<br>
+**nodes** \- every object that has a connection
+**links** \- the connections between the nodes
+
+D3 Layouts - help you to place the nodes in the diagram
+    Force - centering forces, link force keep a distance, many body simulates gravity
+    d3.forceSimualtion()
+        .force(name, force)
+        .nodes(nodes)
+    d3.forceLink(links)
+        .id(d => d.id)
+<br>
+### Hierarchical
+
+USA > State > City
+Root, children, parent
+
+d3.hierarchy(data)
+d3.treemap()
+    .size([width, height])
+
+treemap(root)
+root.leaves - only viz the leaves of the data tree
+
+<br>
+Interaction
+
+selection.on(event, handlerFunction)
+
+d3.event
+
+body.selectAll("circle")
+    .on("click", function(d) {
+        if(d3.event.shiftKey) {}
+        this.style.fill = "blue"
+}
+
+<br>
+<br>
 <br>
 <br>
 <br>

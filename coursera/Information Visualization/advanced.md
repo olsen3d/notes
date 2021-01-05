@@ -32,7 +32,7 @@ When is it appropriate/desirable?
 * **Example when it is desirable?**
     * When the question is inherently spatial
         * questions that correlate a phenomenon to spatial locations/objects (do citi bike commuters tend to sdrop their bikes in proximity of subway stations?)
-        * <span class="colour" style="color: rgb(192, 204, 219);">when the question pertain a phenomenon for which spatial proximity or extent is relevant (how far has the epidemic extended from its point of origin?)</span>
+        * <span class="colour" style="color:rgb(192, 204, 219)">when the question pertain a phenomenon for which spatial proximity or extent is relevant (how far has the epidemic extended from its point of origin?)</span>
     * When the map helps find information (when familiararity matters) (election maps) (you want to find your own city on the map)
 
 Maps are not always the best or only solution
@@ -64,6 +64,45 @@ Do I need a map here? if yes, Why?
     * color mapping steps - sometimes a linear map skews the data. like if the histogram is very bottom heavy. You need to assign different scales. (non-uniform) this will give you more detail in the data at the cost of distorting the data
         * min/max, min/med/max, quartiles, quintiles
 * **Symbol Map** (dist of values, discrete/geo)
+    * instead of representing quantity with color, we use the size of a bubble that is centered to the region the bubble is representing.
+    * does not depend on the regions shape or size
+    * easier to use multiple channels
+        * an election map you can use bubble size for number of votes and color of bubble for party affiliation
+    * does not solve the spatial density problem
+
+##### Common issues
+<br>
+* **Base Rate Bias** \- human\-related events are often coorelated with population density \(showing a dot map with locations of public libraries\, seeing more libraries near cities\. high density regions are not more "cultutally advanced"\, they just have more people\)
+    * to fix this - normalize the data according to population
+* **Insensitivity to Sample Size** \- statistical artiffacts \- when you have large sample sizes\, numbers tend to be stable around the average\. If the sample size is too small\, values tend to be very high and very low\. \(oiscillating values\)
+* **Skewed Spacial Distributions** \- small and large regions\. Like a worldmap European countries are all really small and then Russia and China etc\. are really large
+    * Dorling Cartogram
+* **Perceptual Issues** \- Its hard to estimate and compare values with color intensity\. And color perception affected by area size\.\.\. Also context affects perception \(if you have a large area of a color it will look different than a color on a small region\) also eye tricks can happen with context colors
+* Map Projections - each map is a 2d representation of a 3d object. distortion of angles, areas, shapes, distances, directions.
+    * Cylindrical - good for equator
+    * Conocal - good for middle latitude
+    * Azhimuthal - good for poles
+    * Mercator - no angular distortion
+    * Equivalent - preserve equivalent areas good for world map and small scale general
+    * Conformal - preserve angular relationships, used for large scale maps
+* Interference of map features - interference of the map layer and then the data layer.
+    * keep in mind the focus in visualization is on spatial distribution of values contained in the data.
+    * how many and which details do you really need from the map?
+    * few colors or shades of gray are best
+    * no strong lines or borders
+
+###### Maps + Time
+<br>
+(Spatial + Temporal) visualizing map data that chages over time. example people moving in a city some techniques:
+
+* **Animation** \- mapping time to time\. catchy and has good aesthetics but it can be confusing\, use with caution\!
+    * good for coherent trends that are easy to follow
+    * Make the animation user-controlled
+    * pair it up with a timeline 
+    * coroing the time change (color fades from green to red etc.)
+    * use traces (ghosts, trails)
+* **Faceting** \- small multiples\. map time to space\. less familiar but less confusing\. show each frame as its own map
+* **No Map** \- use something else
 
 <br>
 <br>

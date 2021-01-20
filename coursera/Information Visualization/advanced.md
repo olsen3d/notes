@@ -1,6 +1,6 @@
 # **Information Visualization: Advanced Techniques**
 
-### Geographical Data
+## Geographical Data
 
 * **Spacial Objects** \- counties\, regions\, buildings\, lakes
     * geographical shape and extent that matters for the viz
@@ -98,7 +98,7 @@ Do I need a map here? if yes, Why?
 * **Animation** \- mapping time to time\. catchy and has good aesthetics but it can be confusing\, use with caution\!
     * good for coherent trends that are easy to follow
     * Make the animation user-controlled
-    * pair it up with a timeline 
+    * pair it up with a timeline
     * coroing the time change (color fades from green to red etc.)
     * use traces (ghosts, trails)
 * **Faceting** \- small multiples\. map time to space\. less familiar but less confusing\. show each frame as its own map
@@ -107,11 +107,55 @@ Do I need a map here? if yes, Why?
 <br>
 <br>
 <br>
+## Network Data
 <br>
+Data sets that desctibe connections between objects (relationships)
+
+Tabular Data - shape of tabular data is typically:
+
+* Objects + Values
+* (categories, quantities)
+* very similar to temporal data
+
+Objects: Nodes
+Relationships: Links (edges)
+You might have two tables one that represents the nodes and oen that represents the links
+Example: friendship network
+
+How do you visualize network data?
+
+1. node-link diagrams
+    1. Force-directed layouts - nodes as dots and connections by lines.
+        1. nodes are attracted and repulsed forces between the nodes. repeat until a stable positioning is found.
+        2. main goal is to visualize the structure of the network
+    2. Fixed layouts
+2. matrices
+
+Additional attributes - can be encoded in nodes and links
+
+* **Nodes**
+    * Color
+    * Shape
+    * Size
+* **Links**
+    * Thickness
+    * Pattern - dotted or solid line
+
 <br>
-<br>
-<br>
-<br>
+Fixed Layouts - position of the nodes is fixed according to some criteria
+
+* **Circular** \- nodes equidistant around a circle \- most common
+* **Linear** \- along a line
+* **Grid** \- fixed 2d grid layout
+
+When is a fixed layout more appropriate than a force-directed layout? Force directed is for showing structure of the network. if structure is not as important use a fixed.
+Fixed has good visibility and their properties and degree.
+Since layout is fixed nodes can be split into different meaningful categories
+
+**Edge Bundling** \- edges curve around a circular network\. reduce clutter by bundling\.
+
+fixed layout spatial - on a map. nodes correspond to spatial locations - migration maps
+
 <br>
 <br>
 <br>

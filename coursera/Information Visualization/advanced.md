@@ -156,12 +156,18 @@ Since layout is fixed nodes can be split into different meaningful categories
 
 fixed layout spatial - on a map. nodes correspond to spatial locations - migration maps
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+**Clutter Reduction** \- edge bundle\, clustering\, draw edges only on demand\, remove the edges\, aggregation
+
+**Matrices** \- matrix visualization
+
+* **Adjecency Matrix** \- Nodes are Rows and Columns
+* Edges are Cells
+* Character co-occurences
+* Advantages - Node visibilty with no line crossings, no clutter
+* Disadvantages - familiarity, scalability, needs reordering
+
+Parallel axes map
+
 <br>
 <br>
 <br>

@@ -1,0 +1,21 @@
+What is the internet
+
+Internet - a system of globally interconnected devices.
+Intranet - a private internet (a VPN)
+LAN - Local Area Network
+
+How does it work
+
+A series of protocols everybody agreed to
+
+IP - Internet Protocol
+IP Address - a label assigned to an internet connected device
+addresses are used by the internet protocol
+IPv4 - 8.8.8.8 4.3 billion addresses
+IPv6 - 2001:4860:4860:8888 340 undecillion addresses
+
+TCP - Transmission Control Protocol - has things like error checking
+UDP - User Datagram Protocol - assume it gets there - one way 
+
+ping twitter.com
+

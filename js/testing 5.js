@@ -1,17 +1,13 @@
 
 
-const sum = (x) => {
-  return function(y) {
-    return y ? sum(x + y) : x
+const reverse = (str) => {
+  //return str.split('').reverse().join('')
+  const reversed = []
+  for (let i = str.length; i > 0; i--) {
+    reversed.push(str[i])
   }
+  return reversed.join('')
 }
 
-// console.log(sum(1)(2)(3)(4)())
 
-// console.log(true < 1)
-
-function func() {
-  console.log(arguments)
-}
-
-func(1, 2, 3)
+console.log(reverse('Hello World'))

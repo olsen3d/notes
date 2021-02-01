@@ -26,3 +26,15 @@ function capitalizeFirst (array) {
 
 console.log(capitalizeFirst(['car','taco','banana']))
 // ['Car','Taco','Banana']
+
+
+const flatten = arr => {
+  let flattened = []
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      flattened.push(...flatten(arr[i]))
+    } else {
+      flattened.push(arr[i])
+    }
+  }
+}

@@ -1,0 +1,119 @@
+----------- Recruiter questions to answer: ------------------------------
+
+What do you do currently?
+  I am a senior lead in the visualization department at WeWork
+  I lead 2 main parts of the department:
+    Architectural Visualizations of future Wework spaces which can involve still renders to interactive 360s and virtual reality
+    And Marketing
+
+What are some prohects you've worked on recently?
+  project, challenges, how you overcame them, things you liked
+
+What are you looking for in your next role?
+  I want to learn from the team. solve challenging problems. make an impact.
+
+Compensation
+  95 - 105
+
+Why do you want to work for this company?
+  do some research - what do they do and what are they working on currently
+
+What is your availability for the next steps?
+  have a solid answer ready. Have your calendar open
+
+
+
+-------- Recruiter questions to ask: ----------------------------------------
+
+How many steps in the interview process? How long does it usually take?
+
+How big is your engineering team?
+
+Which team whould I be interviewing for?
+
+What is the culture like?
+
+Who are your competitors?
+
+What sort of projects would i be working on?
+
+
+
+-------- Prescreen questions to answer: ----------------------
+
+What is the difference between const, let, and var?
+  const is immutable - its type can't be changed. It is modifyable though - you can add to an     array and you can add props to an object.
+  let you can change the pointer to whatever you want and it will be scoped to whatever the closure it is in
+  var is an old one it is hoisted to the top
+
+Explain prototypical inheritance?
+  Javascript has a baseline prototype that all objects inherit from. Say you have a class called computer with some properties like year and hard drive size. You can extend that class called Macbook it will inherit those properties and functions and then built upon them with its own.
+
+What does 'this' mean?
+  It refers to the current scope that are you are in. If you are in no scope then it is a reference to the window.
+
+What is the data structure of the DOM
+  It is a tree
+
+What is a stack?
+  Last In First Out - like the call stack
+
+What is a queue?
+  First In First Out
+
+How would you implement those in javascript?
+  With an array. push in to end of stack pop off a stack
+  push in to end of queue shift off beginning of a queue
+
+How can you tell if an image element is loaded on a page?
+  The is an onload on an image that will fire with a callback when it is loaded.
+
+What are call and apply?
+  They are ways of changing the scope of a function. The first parameter is 'this'
+
+What is event delegation?
+  you could apply an event handler to every single element you want to have. Or using event delegation you could say I wanna have one event listener, and thats at the top. When you click
+  on something it just bubbles up to the top to the parent that handles the event.
+  note: event listeners are very expensive on a page. so it is better to have one event handler vs 60 for performance reasons
+
+What is a worker? when would you use one?
+  A worker is something you would use to offload computationally expensive work to a different thread. You can send expensive tasks so the main thread isnt blocking the UI
+
+
+
+---------- Code Test ----------------------------
+
+Make your code as readable as possible.
+Write comments
+Dont overcomplicate
+Dont import too many libraries
+If you have time do some tests
+Ask questions
+
+Big O - Given the worst case scenario this is the longest time a funciton is going to take to complete. (based off the input)
+
+Big Omega - best case
+
+Big Theta - average case
+
+
+
+---------- Phone Screen ------------------------------
+
+Ask questions - just like in real life you will have a back and forth with your coworkers. They cant solve it for you but ask questions.
+Talk out your solution. Talk out loud the whole time. No awkward silences
+Get comfortable with the environment - codepen etc. you can ask ahead of time what the environment is.
+
+It is costly to keep appending childs to the DOM - if you need to do that for example a list then append them all to a document fragment document.createDocumentFragment() then just append that fragment.
+
+
+--------- on site (lol covid) --------------------------
+
+get better at writing code on paper/white board
+ask what style the technical questions will be
+
+Strings - a primitive type - useful methods split() toLowerCase() subString() startsWith() - they are immutable. so if you are changing it it costs memory. generally if you are manipulating a string it is better to split into an array and then do what you need to do and then join it back into an array.
+
+Reverse a string
+
+Arrays = Object.entries(), Array.from(), [...item]

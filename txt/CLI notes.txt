@@ -80,9 +80,9 @@ usr = unix system resources
 
     mkdir + <directory1> + <directory2> + <directory3>... : Make Directory (make multiple directories at once) (mkdir Folder1 Folder2 Folder3)
 
-    touch + <filename> : Touch (create a file with the specified name) (touch myNewFile.js)
+    touch + <filename> : Touch (create a file with the specified name) (touch myNewFile.js) 
 
-    mv + <file_to_move> + <destination_path> : Move (move a file or folder to the specified location) (mv myNewFile.js ../Fullstack_Stuff/myNewFile.js)
+    mv + <file_to_move> + <d estination_path> : Move (move a file or folder to the specified location) (mv myNewFile.js ../Fullstack_Stuff/myNewFile.js)
 
     mv + <file_to_rename> + <new_filename>: Rename (mv can also be used to rename a file) (mv typoo.js typo.js)
 

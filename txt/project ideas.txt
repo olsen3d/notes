@@ -62,3 +62,7 @@ service request dashboard like NYC 311
 -> map with request data
 https://github.com/cityofasheville/Digital-Services-Developer
 
+
+
+
+that video of the 3 dots making the fractal pattern

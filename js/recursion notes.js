@@ -1,9 +1,4 @@
-/* eslint-disable guard-for-in */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-multiple-empty-lines */
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable linebreak-style */
-
+/* eslint-disable */
 // recursion notes 1
 
 

@@ -24,7 +24,8 @@ var combinationSum4 = function(nums, target) {
 
     for (let i = 0; i <= target; i++) {
       for (let j = 0; j < nums.length; j++) {
-        if (nums[j] <= i) {
+        console.log(nums[j], i)
+        if (i - nums[j] >= 0) {
           result[i] = result[i] + result[i - nums[j]]
         }
       }
@@ -37,18 +38,5 @@ console.log(combinationSum4([1, 2, 3], 4))
 
 
 /*
-const combinationSum4 = (nums, target) => {
-  let ary = new Array(target+1).fill(0);
-  ary[0]=1;
-
-  for (let i=0; i<=target; i++) {
-    for (let n=0; n<nums.length; n++) {
-      if (nums[n] <= i) {
-        ary[i] = ary[i]+ary[i-nums[n]];
-      }
-    }
-  }
-
-  return ary[target];
-};
+[1, 1, 0, 0, 0]
 */

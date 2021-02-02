@@ -19,3 +19,16 @@ UDP - User Datagram Protocol - assume it gets there - one way
 
 ping twitter.com
 
+DNS - Domain name system - another protocol icann controls this - an internet phone book
+      finds the closest server for this website
+
+
+blog.jemyoung.com - subdomain
+jemyoung.com - Domain
+.com - TLD
+
+TLD - top level domain - owned by compaines and countries
+
+why subdomain? - it allows you to partition your data might look like a new website or a different app but still part of the site.
+
+Nameservers - map domains to ip addresses - the record keepers of the internet

@@ -76,4 +76,11 @@ Linux - linux - ubuntu
   utilites - apps that do one thing they can be updated without breaking anything
 choose an LTS version - Long Term Support
 
-SSH 
+SSH - a type of user authentication - Secure Socket Shell - key pair a public ket and a private key
+your computer has private key and the public key is in the server. everything is encrypted and goes through a "tunnel"
+
+SSH Key ~/.ssh ls ssh-keygen - makes a private and a public key
+ssh root@174.138.47.198 - to log in
+ssh -i fsfe - the private key to use 
+ssh -i fsfe root@174.138.47.198
+exit - to exit the server

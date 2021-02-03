@@ -44,3 +44,36 @@ Packet - a small bit of information - mainly contains metadata - where its going
 How does the internet work? it runs over TCP/IP protocols and on those protocols are packets that contain information - a series of trusts to hand off data to the next person. if it type in a website that gets resolved by a nameserver to a server that handles the data.
 
 Net neutrality says that the trust is broken - an ISP can say if a packet is going to ex. sri lanka - they can tax it at a different rate or make it go faster or slower
+
+
+VIM - Vi Improved - a text editor - VI is good because it is on almost every server. You wont always be able to open things in vscode - no mouse
+
+VIM modes - 
+	Insert mode - i - editing text
+command mode - ESC - copy paste etc.
+	Last line mode - : - searching saving exiting
+
+How to open VIM - vi in bash
+How to quit VIM - ESC :q!
+Save/write - :w
+
+Server - what does a server do? - serves content - responds to requests - anything really can be a server
+
+vi simpleserver.js
+
+server sits in a datacenter your request will probably go through headers
+
+The Cloud - let someone else manage the server hardware - distributed globally so its faster and a shorter distance to route - you want the minimum amount of hops.
+
+Elastic computing - scales as needed - you can just get more servers from the data centers - costs adjust with traffic.
+
+VPS - slice a server to what are you are using $5 a month etc.
+digital ocean can host - droplet is virtual server
+EC2 is amazon virtual server
+
+Linux - linux - ubuntu
+  kernel - talks to cpu etc.
+  utilites - apps that do one thing they can be updated without breaking anything
+choose an LTS version - Long Term Support
+
+SSH 

@@ -1,6 +1,12 @@
-responsiveness tutorials
 convert portfolio and all projects to responsive
 
-microinteractions
+fs for fe on fe masters
+
+some microinteractions for moneyclip
 
 apply to some jobs
+
+COVER LETTER
+
+
+algos

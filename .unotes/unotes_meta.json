@@ -108,6 +108,12 @@
       "files": {
         "Q and A": 0
       }
+    },
+    "jobs": {
+      "name": "jobs",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
     }
   },
   "files": {}

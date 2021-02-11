@@ -84,3 +84,62 @@ ssh root@174.138.47.198 - to log in
 ssh -i fsfe - the private key to use 
 ssh -i fsfe root@174.138.47.198
 exit - to exit the server
+
+dont use root in ubuntu
+
+buy a domain - namecheap, google, godaddy
+
+DNS records 
+  A records - map name to an ip address - mike.com > 23.23.185.61
+  CNAME - maps name to name - blog.mike.com > 23.23.185.61
+
+dig olsen.dev - show all the records for website
+
+fractalsare.cool on google domains
+
+add 2 A Records with your IP address @ and www
+use digital ocean to add domain
+update nameserver on google
+
+on DO add an A record hostname is @, direct to your server, TTL 3600
+add an A record hostname www, same server, TTL 3600
+
+server IP - 174.138.47.198
+
+go to google domains and add nameservers from DO there should be 3 of them under your A records
+
+
+
+--------------
+
+HTTP
+request <---> response
+
+http datagram of a request:
+
+GET / HTTP/1.1
+Host: olsen.dev
+User-Agent: Mozilla/5.0 Macintosh Intel
+  Safari/537.21
+Accept: text/html
+Accept-Encoding: gzip, br
+
+A packet is made up of data and metadata - part of the metadata is headers
+
+Headers - what kind of encoding, where its coming from, content type
+  GET, Host, User-agent, Accept, etc.
+  certain headers are unmidifyable - Host
+  User agent - which browser, what features it has, etc. version number
+  Set-cookie - sets stateful information
+  X - custom headers
+
+Cookie - a piece of metadata that goes on every request - persists on the browser until expiration
+        it lets you extend the user ecxperience across sessions. too many cookies can add overhead and slow your requests
+
+a response:
+
+HTTP/1.1 200 OK
+Server: nginx/ ubuntu
+Date: sep 25th 2019
+Content-Type: html/text
+Cointent-Length: 12

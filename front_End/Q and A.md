@@ -1,14 +1,11 @@
 # Recruiter questions to answer
-<br>
-<br>
+
 ## Tell me about yourself?
 
 * **Current**: what do you do currently?
 * **Past**: I have about 10 years or so of experience in Computer Aniimation, from a little bit of video gfames to automotive visualizations for Mercedes to architectural visualizations for Wework
 * **Future**: I began coding at Wework and went to fullstack
 
-<br>
-<br>
 ## What do you do currently?
 
 **I am a senior lead in the visualization department at WeWork**
@@ -28,7 +25,6 @@ Soft skills included in (myslef and) my role:
 * **Communication** with the junior artists and the creative director on the marketing team.
 * **Problem Solving** how to best process data for my team.
 
-<br>
 <br>
 ## Why do you want to leave your position?
 
@@ -79,11 +75,11 @@ My lowest possible before walking away: **$85,000**
 <br>
 ## Why do you want to work for this company?
 
-  I want a front end position, I just did a finance related project and really liked it, I want to learn and be able to move up in my position.
+I want a front end position, I just did a finance related project and really liked it, I want to learn and be able to move up in my position.
 <br>
 ## What is your availability for the next steps?
 
-  have a solid answer ready. Have your calendar open
+have a solid answer ready. Have your calendar open
 
 <br>
 <br>

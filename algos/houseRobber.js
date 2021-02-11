@@ -17,17 +17,26 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 */
 
 var rob = function(nums) {
+  //edge cases
   if (nums.length === 0) return 0
   if (nums.length === 1) return nums[0]
   if (nums.length === 2) return Math.max(nums[0], nums[1])
-  const dpArray = new Array(nums.length).fill(0)
-  dpArray[0] = nums[0]
-  dpArray[1] = Math.max(nums[0], nums[1])
+  
+  //initialize dp array
+  const result = new Array(nums.length).fill(0)
+  result[0] = nums[0]
+  result[1] = Math.max(nums[0], nums[1])
+  
+  //loop through each house and take whatever is more: 
+  //the current house plus the 2nd house back
+  //or just the first house back
   for (let i = 2; i < nums.length; i++) {
-      dpArray[i] = Math.max(nums[i] + dpArray[i - 2], dpArray[i - 1])
+      result[i] = Math.max(nums[i] + result[i - 2], result[i - 1])
   }
-  return dpArray[dpArray.length - 1]
-};
+
+  //last house is the highest total you can take
+  return result[result.length - 1]
+}
 
 
 

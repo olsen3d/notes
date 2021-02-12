@@ -17,15 +17,29 @@ Input: coins = [2], amount = 3
 Output: -1
 */
 
+// const coinChange = (coins, amount) => {
+//   const map = {0: 0}
+//   for (let i = 1; i <= amount; i++) {
+//     map[i] = amount + 1
+//     for (let j = 0; j < coins.length; j++) {
+//       if (coins[j] <= i) map[i] = Math.min(map[i], 1 + map[i - coins[j]])
+//     }
+//   }
+//   console.log(map)
+//   return map[amount] > amount ? -1 : map[amount]
+// }
+
 const coinChange = (coins, amount) => {
-  const map = {0: 0}
-  for (let i = 1; i <= amount; i++) {
-    map[i] = amount + 1
-    for (let j = 0; j < coins.length; j++) {
-      if (coins[j] <= i) map[i] = Math.min(map[i], 1 + map[i - coins[j]])
+  const dpArray = new Array(amount).fill(0)
+  for (let current = 1; current <= amount; current++) {
+    dpArray[current] = amount + 1
+    for (let coin of coins) {
+      if (coin <= current) {
+        dpArray[current] = Math.min(dpArray[current], 1 + dpArray[current - coin])
+      }
     }
   }
-  return map[amount] > amount ? -1 : map[amount]
+  return dpArray[amount] > amount ? -1 : dpArray[amount]
 }
 
 const xcoinChange = function(coins, amount) {

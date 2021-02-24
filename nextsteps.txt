@@ -8,5 +8,60 @@ apply to some jobs
 
 COVER LETTER
 
+show diligence over passion
+
+car website prerendered headlight with camera mouse movement
+highligh glowing tech
+d3 stuff 
+going around track top gear shots
+
+https://www.turbosquid.com/3d-models/3d-tesla-s-frame-modeled-1191572
+https://stackoverflow.com/questions/58428042/how-to-make-a-parallax-effect-using-three-js
+
+
+https://threejs.org/examples/webgl_postprocessing_outline.html
+https://discourse.threejs.org/t/how-to-give-lightmap-and-envmap-more-punch-maybe-hdr/12825
+https://stackoverflow.com/questions/38314521/change-color-of-mesh-using-mouseover-in-three-js
+
+https://www.cgtrader.com/3d-models/exterior/street/abandoned-runway-hdri-2019-hdr
+https://www.cgtrader.com/3d-models/car/sport/american-muscle-car-unbranded
+
+
 
 algos
+
+
+fruitbox
+butcherbox site clone
+
+https://www.butcherbox.com/sourcing
+
+
+https://www.flaticon.com/packs/nature-and-ecology
+https://graphicriver.net/item/fruit-box-solution-logo/29626922
+https://www.flaticon.com/packs/food-17
+
+https://www.flaticon.com/packs/shopping-and-commerce-9
+
+https://www.flaticon.com/packs/autumn-nature-25
+https://www.flaticon.com/packs/summertime-4
+https://www.flaticon.com/packs/fruit-and-vegetables-4
+https://www.flaticon.com/packs/vegan-11
+https://www.flaticon.com/packs/mexico-34
+https://www.flaticon.com/packs/agriculture-34
+https://www.flaticon.com/packs/fruits-and-vegetables-37
+https://www.flaticon.com/packs/speech-bubbles-19
+https://www.flaticon.com/packs/autumn-68
+https://www.flaticon.com/packs/autumn-56
+https://www.flaticon.com/packs/gardening-44
+https://www.flaticon.com/packs/grocery-15
+https://www.flaticon.com/packs/summer-30
+https://color.adobe.com/create/color-wheel
+https://color.adobe.com/mythemes?viewTheme
+
+
+3d role
+
+Experience with 3D Graphics on Web (WebGL, Three.js, related frameworks)
+
+As a 3D Graphics & Front End Web Developer, your responsibilities will include all phases of user interface development along with helping enrich it with 3D visualizations. From architecture and design to implementation and customer engagement. You will work with our internal customers and backend developers both on our team and others. We are looking for someone that has an eye for design, is able to communicate well with members outside our team and play an active role in the future roadmap of our applications.

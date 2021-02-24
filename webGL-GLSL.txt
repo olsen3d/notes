@@ -1,0 +1,27 @@
+what is WebGL - Web Graphics Library - a browser implementation of OpenGL
+OpenGL is super old from the 90s - drives games and graphics engines
+mac, linux, unix are OpenGL. Windows might be something more like directX
+
+WebGL just lets you use your GPU
+
+GLSL - A shader language for OpenGL
+
+GLSL language:
+  unifrom vec3 color;
+  uniform float opacity;
+
+  void main () {
+    vec3 fragColor = vec3(vUv.x) * color;
+  }
+
+Javascript implementation: (wrapped in a template string)
+  const fragmentShader = `
+  unifrom vec3 color;
+  uniform float opacity;
+
+  void main () {
+    vec3 fragColor = vec3(vUv.x) * color;
+  }
+  `
+Three.js - A high level framework atop WebGL/GLSL
+  load 3d models and geometry and make shaders etc.

@@ -1,0 +1,189 @@
+Explain error boundaries
+  <ErrorBoundaryComp>
+    ^ has special lifecycle get state from error
+      can have a fallback component
+      component did catch
+
+
+best lifecycle for API calls?
+  component did mount
+
+
+react patterns name some patterns
+  context-api pattern
+    use context to access props
+    <Provider> and <Consumer>
+  render props
+    use children as functions
+  presentation component pattern
+    state component and presentational components
+
+
+Why use react in your project?
+  depends on project - if it will take 6 months see if any frameworks have major changes coming. if react hooks is about to come out then maybe use somethinhg else
+
+  angular is one package has testing and routing
+  react you need to add all that stuff
+
+  react is pretty plain javascript with no crazy syntax to remember
+
+
+what is css-in-js pattern
+  css is global you can use css modules 
+  you can do inline css from in the component
+
+
+why cant you update state directly without setState()?
+  setState will rerender
+  copy state modify it and send it to it
+
+
+how many ways can you conditionally render in react?
+  if statement 
+  && expression
+  ternary operator ? :
+
+
+what is Fragments and why use it?
+  <React.Fragment> will let you render children without a parent like a <div>
+
+
+how to do code-splitting in react?
+  when the bundles creates bundle.js - the whole website gets sent right away
+  multiple bundles from dynamic imports
+  const lazyComp = React.lazy(() => import('./component')) - this will load async
+  <suspense> </suspense>
+
+
+what are some alternatives to redux?
+  mobX
+  apollo client + GraphQL
+  RxJS
+
+
+what is redux middleware?
+  you add another layer before the next
+  action > reducer > store
+  a thunk would be middleware
+  so the store doesnt update until the server responds
+
+
+redux saga vs redux thunk
+  they are both middleware
+  redux thunk makes an action creator
+
+
+how to optimize a react app?
+  ask questions!!!! find out parameters
+  this is also about communication!!!
+  how big is it how complex? what kind of performance issues?
+  a big bundle? memory leaks? jank?
+
+  speed - profiler and find out bottlenecks
+    you might be rerendering when not supposed to
+    use react memo
+
+  big bundle - use lazy loading or dynamic imports
+
+  might seem slow because APIs are slow - so not really react but you may need to speed up your API calls
+
+  maybe there is a lot of big assets 
+
+
+explain virtual DOM
+  age old question how to update the dom efficiently??
+  slow and expensive dom updates
+  react has its own dom tree called vdom
+  any changes will update the vdom
+  and that will only change whats needed in the real dom
+
+
+fix this for me!
+  do - understand whats going on!
+  look over it very carefully before starting
+
+  ask questions - is there multiple problems?
+
+
+add functionality
+  tictactoe - design a check for who is the winner
+  3x3 matrix change to a 4x4 matrix game
+
+  draw it out and explain the logic 
+
+
+build something from scratch
+  build a todo list add item remove item
+
+  use create-react-app
+  divide into components!
+  dont make it too fancy focud on functionality
+
+
+hooks
+
+hooks are functions that can manipulate state etc.
+they replace class components with functions so it is more
+functional programming with closures
+
+why hooks
+  its simpler and more concise
+  no more map state to props
+
+hooks rules?
+  only call at top level
+  dont call in a loop etc.
+
+how to change from class to hooks?
+  update react, and react-dom versions
+  tests
+  do one route or component at a time
+  tests
+
+
+how to debug hooks
+  console logic
+  debugger
+  react developer tools chrome plugin
+
+
+why is onCLick in react different?
+  it handels different browsers for you
+  synthetic events
+  events are pooled - they are reused
+  native events
+
+
+how does event delegation work in react?
+  say you have an onclick on a <li>
+  then you have 1000 <li> it woul dbe better to just have one ecvent at the top of the document
+  react does this automatically
+
+
+list hooks
+  usestate
+  useeffect
+  useRef 
+  useContext
+  uselayoutEffect
+
+
+best practices for hooks?
+  follow the rules
+  use a linter
+  combine usestates
+
+
+how often should you update react?
+  every 6 or 9 months
+  a week dedicated to upgrading
+
+
+
+todo list app
+searchable dropdown
+deeply nested dropdown - api returns nested json
+
+take home jira board like a ticket system
+myboard
+todo, inprogress, ... done

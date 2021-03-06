@@ -1,0 +1,108 @@
+About Us:
+
+Pulse Analytics is an innovative healthcare tech company; we develop various web-based decision-support applications to help our clients better understand the complex landscape of oncology and special therapeutics. Our dashboards translate and visualize data to create engaging and useful platforms for our users.
+
+We're focused on sharing the company's vision and guiding our team towards the end goal. We embrace all ideas and hold multiple brainstorming sessions around new themes to progress future projects. Our products are used by top pharmaceutical companies to help them make better market access decisions within the oncology and special therapeutics space.
+Responsibilities:
+
+The Software Engineer (Front-end) role is for someone who's excited about crafting elegant user interfaces and improving the overall experience for users. In this role, you will:
+
+
+• Build elegant user interfaces across our exciting product portfolio
+• Architect efficient and reusable front-end systems that drive our platform
+• Identify and resolve front-end performance issues
+
+Minimum Qualifications:
+
+• Bachelor's Degree
+• 1 - 3 years of industry experience minimum
+
+• You write clean, performant JS code
+
+• You have a deep understanding of cross-browser differences, JS performance tradeoffs, and profiling and debugging tools
+
+• You are passionate about building clean and modern user interfaces that enable users to solve their problems.
+
+• You can work within tight deadlines to deliver products
+
+• You have working knowledge of NodeJS
+
+• You have experience and knowledge with React and Webpack
+
+• Proven ability to work as part of a team to solve technical problems
+
+• Demonstrated ability to learn continuously, work independently, and make decisions with minimal supervision
+
+• Excellent written and verbal communication skills
+
+• You are interested in growing your skills and learning about emerging technologies
+
+• You have CSS skills
+
+
+Preferred Qualifications:
+
+
+• Basic knowledge of GraphQL
+
+• Science or engineering degree preferred
+
+• Experience with server-side rendering techniques & working in test-driven development environment
+
+• Experience with JIRA or other project tracking software
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+• You have a deep understanding of cross-browser differences, JS performance tradeoffs, and profiling and debugging tools
+
+• You are passionate about building clean and modern user interfaces that enable users to solve their problems.
+
+
+• You have working knowledge of NodeJS
+
+• You have experience and knowledge with React and Webpack
+
+• You have CSS skills
+
+
+
+
+extra 
+
+• Basic knowledge of GraphQL
+
+• Experience with server-side rendering techniques & working in test-driven development environment
+
+
+
+
+HTML CSS refresh
+
+front end questions
+
+react refresher
+
+BFE
+
+webpack
+
+Graph QL videos
+
+
+tests
+
+promises/async awairt
+
+axios

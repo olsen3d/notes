@@ -6,7 +6,7 @@ What do you do currently?
     Architectural Visualizations of future Wework spaces which can involve still renders to interactive 360s and virtual reality
     And Marketing
 
-What are some prohects you've worked on recently?
+What are some projects you've worked on recently?
   project, challenges, how you overcame them, things you liked
 
 What are you looking for in your next role?
@@ -26,16 +26,20 @@ What is your availability for the next steps?
 -------- Recruiter questions to ask: ----------------------------------------
 
 How many steps in the interview process? How long does it usually take?
+are you allowed to go into any more detail? react vs vanilla etc.
 
 How big is your engineering team?
-
-Which team whould I be interviewing for?
 
 What is the culture like?
 
 Who are your competitors?
 
 What sort of projects would i be working on?
+
+how long have you been here? what do you like about it?
+
+when can i expect any next steps?
+can i reach you at __ email? is it ok if i follow up with you in a week?
 
 
 
@@ -113,7 +117,3 @@ get better at writing code on paper/white board
 ask what style the technical questions will be
 
 Strings - a primitive type - useful methods split() toLowerCase() subString() startsWith() - they are immutable. so if you are changing it it costs memory. generally if you are manipulating a string it is better to split into an array and then do what you need to do and then join it back into an array.
-
-Reverse a string
-
-Arrays = Object.entries(), Array.from(), [...item]

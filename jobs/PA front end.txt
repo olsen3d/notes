@@ -105,4 +105,7 @@ tests
 
 promises/async awairt
 
-axios
+axios/getting data
+
+paginate
+render a list with a million items

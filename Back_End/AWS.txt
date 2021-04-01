@@ -1,0 +1,112 @@
+single page app
+  hosted on aws 
+  distributed globally
+  secured with ssl 
+  auto deploy with CI/CD 
+  dynamic response to requests
+
+
+placing billing limits
+
+IAM - Identity Access and Management
+how to manage sub accounts
+its a bad idea to use your root account for anything
+
+principle of least Access - only give accounts which you need
+
+S3 - simple storage service
+
+buckets - you can put things into buckets aka files
+you can read and write and host website
+
+infinitely scalable especially with static assets
+files can be small or large
+99.99 availability 4 nines
+
+features
+lifecycles Management
+versioning
+encryption
+security
+image hosting etc.
+
+storage tiers
+standard
+infrequently accessed
+reduced redundancy
+glacier not s3 - almost never accessed - backups etc.
+
+s3 is a key-value store
+
+data consistency modeled
+putting new objects in s3 is immediate youll get a 200
+updating and removing objects is eventually consistent users might get an old version
+
+costs
+uploading to s3 is free 
+you get charged for storage 
+you get charged for requests
+
+register domain name with aws route 53
+
+policies - policy terms
+principal - who can do the thing
+action - what can they do
+rsource - to which things
+
+setting up an s3 bucket
+
+list contents of bucket
+aws s3 ls s3://olsenmike
+
+upload the current folder (and all subfolders) to your bucket
+aws s3 cp ./ s3://olsenmike --recursive
+
+deploy to a bucket ^ cp your dist/ folder
+
+route 53 is a scalable DNS
+
+Cloudfront
+seeks to solve the issue of making a globally distributed servers
+can take a while to propagate around the world
+
+cloudfront edge nodes will cache requests for you - so there are less requests to s3
+more performance for less money
+
+by default cloudfront ignores headers
+to improve cacheing
+
+has some custom headers desktop viewer mobile viewer country etc.
+
+CI/CD pipeline with travis
+automate deploying and invalidating etc.
+
+lambda@edge
+allows you to deploy lambda functions to your cloudfront edge nodes
+you can intercept and modify requests and responses
+
+4 places for lambdas
+
+      1. Viewer Request               2. Origin Request
+END    ---------------->  CLOUDFRONT  ---------------->   S3
+USER   <----------------  CACHE       <----------------   SERVER 
+      3. Viewer Response              4. Origin Response
+
+Viewer request - on every req befor CF's cache is checked
+  modify the cache key URL, cookies, headers, modify a query string
+  perform authentication and authorization
+  make additional network calls
+  generate responses (unchaced)
+
+Origin Request - on chace miss, before the req is forwarded to the servers
+  you can make external network calls
+  rewrite the URLS
+
+Origin Response - response that hasnt been cached yet
+  make network calls 
+  modify responce headers prior to caching 
+
+Viewer Response - all requests after response is received with or without cache
+
+
+security headers

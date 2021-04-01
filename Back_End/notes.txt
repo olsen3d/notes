@@ -1,0 +1,17 @@
+API design and development
+parameters, schema, endpoints, etc.
+
+Databases
+schemas, type of db, interaction
+relationsl or non
+
+3rd party services
+hook these up to the app
+external database - amazon web services
+authentication - google auth
+payment - stripe and paypal
+google maps and yelp
+
+infrastructure
+SRE or production
+monitoring services - apis healthy

@@ -143,3 +143,65 @@ Server: nginx/ ubuntu
 Date: sep 25th 2019
 Content-Type: html/text
 Cointent-Length: 12
+
+
+Conatainers & Microservices
+
+microservice - it only does one thing - architecure of loosely connected services
+monolith - does more than one thing
+
+Container - lighter weight than a virtual machine - a set of libraries that it needs
+doesnt care about the OS - portable
+can create a node app wrap it in a container and put it whereever you want OS doesnt matter
+Decouples the application from the inftastructure
+
+Docker, Amazon ECS Elastic Container Service
+
+Orchesration - a way of conducting your containers - set them up
+take all the containers and all the OS and apply them to the servers
+
+Docker swarm, Amazon EKS Elastic Kubernetes Service, Kubernetes "K8s"
+
+elastic computing can expand - netflix after work etc.
+
+Load Balancers - routes all the traffic to the appropriate cluster
+Scheduling algos - round robin, IP hashing, random choice, least connections, least Load
+cpu, memory, and network load
+
+nginx has a load balancer too
+upstream backend {
+  least_conn;
+  server backend1.example.com
+  server backend1.example.com
+}
+
+server {
+  location / {
+    proxy_pass http://backend
+  }
+}
+
+what about sessions - what if you go to a different server you arent authed on
+sticky sessions will keep you on that server
+ip hashing or an auth layer before you even hit nginx - once you are authenticated at the firewall then you can go to any server doesnt matter
+
+Deployments
+ansible, vagrant, puppet will deploy to your servers 20s to 100s
+write sa script to roll this out to each server
+
+Databases
+relational - SQL - tables - related data - strict structure "schema"
+non-relational = noSQL - redis, mongo - data agnostic - loose structure
+redis is a cache database - key value store
+mongo - key - with a json db 
+amazon redshift - for petabyte data
+
+indexDB is in your browser
+
+Redis - 
+sudo apt install redis-server
+node-redis
+
+websockets - 2 way message from client to serverpersistent bidirectional connection between client and server
+TCP requires a handshake etc to send data
+websocket keeps connection alive via a tunnel over TCP

@@ -1,14 +1,3 @@
-convert portfolio and all projects to responsive
-
-fs for fe on fe masters
-
-some microinteractions for moneyclip
-
-apply to some jobs
-
-COVER LETTER
-
-show diligence over passion
 
 car website prerendered headlight with camera mouse movement
 highligh glowing tech
@@ -25,10 +14,6 @@ https://stackoverflow.com/questions/38314521/change-color-of-mesh-using-mouseove
 
 https://www.cgtrader.com/3d-models/exterior/street/abandoned-runway-hdri-2019-hdr
 https://www.cgtrader.com/3d-models/car/sport/american-muscle-car-unbranded
-
-
-
-algos
 
 
 fruitbox
@@ -60,25 +45,45 @@ https://color.adobe.com/create/color-wheel
 https://color.adobe.com/mythemes?viewTheme
 
 
-3d role
+Hi Tegan, hope you are doing well.
 
-Experience with 3D Graphics on Web (WebGL, Three.js, related frameworks)
+I have 2 questions about some of the open roles you have currently posted if you have a minute to help -
 
-As a 3D Graphics & Front End Web Developer, your responsibilities will include all phases of user interface development along with helping enrich it with 3D visualizations. From architecture and design to implementation and customer engagement. You will work with our internal customers and backend developers both on our team and others. We are looking for someone that has an eye for design, is able to communicate well with members outside our team and play an active role in the future roadmap of our applications.
+My background and skills outlined below align well with the 3D Lead Engineer position, however I don't have that many years of experience. As for the Full Stack positions, I was wondering if they involve 3D design in any way.
+
+Either way I am interested in your product and would love to learn more!
+
+A little about myself:
+I have 10+ years of experience in 3D Visualization - from video games, automotive visualization, and mostly architectural visualization utilizing Unity, 3Ds Max, Vray, Corona, etc. You can see my architectural renderings here: https://www.olsen.dev/archviz
+
+More recently I have a year of experience building Full Stack projects utilizing React, GraphQl, PostgreSQL, and various AWS technologies(S3, CloudFront, Lamba functions, etc.) You can see my projects hosted here: https://www.olsen.dev/softwaredev 
+
+Thank you for your time and hopefully we can explore a potential fit for me into the team!
 
 
-PA 
+https://wework3d.viewin360.co/share/collection/7P5fG
 
-pick a time 
-respond and ask about interview process
 
-research company - size, blog posts, locations, etc.
-11-50 ppl
-founded 2015
-Private
-NYC
+Mike Olsen - Front end / 3D Visualization - Obsess Frontend Engineer Position
 
-reseearch salary - depending on size, and duties, etc.
-95 - 105
+Hi Neha, hope you are doing well.
+I am interested in Obsess' concept of virtual stores and I'd love to learn more about the position and the product!
+A quick summary of my skills and experience:
 
-react props
+I have 10+ years of experience in 3d Visualization from video games to architectural visualization. I also have a year of experience developing applications using React/Redux with unit tests and CI/CD with TravisCI.
+
+Currently at Wework I lead a team that produces 3d rendered virtual tours like this one: https://wework3d.viewin360.co/share/collection/7P5fG that seem to be similar to the concept of your product.
+
+You can view the rest of my work on my portfolio: https://www.olsen.dev
+
+I have also gone ahead and applied for the position via LinkedIn.
+
+Thank you for your time and hope to hear from you soon,
+
+Mike
+
+
+progress over perfection 
+dilligence over passion
+
+Experience with AWS hosting solutions CloudFront/EBS/EC2
